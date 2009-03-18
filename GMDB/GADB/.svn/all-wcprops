@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svnroot/gm-db/!svn/ver/920/trunk/GADB
+END
+creature_names_localized.sql
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/gm-db/!svn/ver/920/trunk/GADB/creature_names_localized.sql
+END
+itempages_localized.sql
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/gm-db/!svn/ver/909/trunk/GADB/itempages_localized.sql
+END
+items_localized.sql
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/gm-db/!svn/ver/909/trunk/GADB/items_localized.sql
+END
+gameobject_names_localized.sql
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/gm-db/!svn/ver/909/trunk/GADB/gameobject_names_localized.sql
+END
+npc_text_localized.sql
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/gm-db/!svn/ver/885/trunk/GADB/npc_text_localized.sql
+END
+quests_localized.sql
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/gm-db/!svn/ver/909/trunk/GADB/quests_localized.sql
+END

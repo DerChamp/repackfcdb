@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svnroot/gm-db/!svn/ver/951/trunk/GMDB/ScriptDev2
+END
+eventai_texts.sql
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/gm-db/!svn/ver/938/trunk/GMDB/ScriptDev2/eventai_texts.sql
+END
+HardcodedGossipTexts.patch
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/gm-db/!svn/ver/951/trunk/GMDB/ScriptDev2/HardcodedGossipTexts.patch
+END
+script_texts.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/gm-db/!svn/ver/900/trunk/GMDB/ScriptDev2/script_texts.sql
+END

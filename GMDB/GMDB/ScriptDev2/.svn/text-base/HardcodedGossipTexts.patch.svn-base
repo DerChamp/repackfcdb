@@ -1,0 +1,2325 @@
+Index: include/sc_gossip.h
+===================================================================
+--- include/sc_gossip.h	(Revision 915)
++++ include/sc_gossip.h	(Arbeitskopie)
+@@ -10,65 +10,65 @@
+ #include "QuestDef.h"
+ 
+ // Gossip Item Text
+-#define GOSSIP_TEXT_BROWSE_GOODS        "I'd like to browse your goods."
+-#define GOSSIP_TEXT_TRAIN               "Train me!"
++#define GOSSIP_TEXT_BROWSE_GOODS        "Ich sehe mich hier nur mal um"
++#define GOSSIP_TEXT_TRAIN               "Ich benötige eine Ausbildung"
+ 
+-#define GOSSIP_TEXT_BANK                "The bank"
+-#define GOSSIP_TEXT_IRONFORGE_BANK      "The bank of Ironforge"
+-#define GOSSIP_TEXT_STORMWIND_BANK      "The bank of Stormwind"
+-#define GOSSIP_TEXT_WINDRIDER           "The wind rider master"
+-#define GOSSIP_TEXT_GRYPHON             "The gryphon master"
+-#define GOSSIP_TEXT_BATHANDLER          "The bat handler"
+-#define GOSSIP_TEXT_HIPPOGRYPH          "The hippogryph master"
+-#define GOSSIP_TEXT_ZEPPLINMASTER       "The zeppelin master"
+-#define GOSSIP_TEXT_DEEPRUNTRAM         "The Deeprun Tram"
+-#define GOSSIP_TEXT_FERRY               "The Rut'theran Ferry"
+-#define GOSSIP_TEXT_FLIGHTMASTER        "The flight master"
+-#define GOSSIP_TEXT_AUCTIONHOUSE        "The auction house"
+-#define GOSSIP_TEXT_GUILDMASTER         "The guild master"
+-#define GOSSIP_TEXT_INN                 "The inn"
+-#define GOSSIP_TEXT_MAILBOX             "The mailbox"
+-#define GOSSIP_TEXT_STABLEMASTER        "The stable master"
+-#define GOSSIP_TEXT_WEAPONMASTER        "The weapon master"
+-#define GOSSIP_TEXT_OFFICERS            "The officers' lounge"
+-#define GOSSIP_TEXT_BATTLEMASTER        "The battlemaster"
+-#define GOSSIP_TEXT_BARBER              "Barber"
+-#define GOSSIP_TEXT_CLASSTRAINER        "A class trainer"
+-#define GOSSIP_TEXT_PROFTRAINER         "A profession trainer"
+-#define GOSSIP_TEXT_LEXICON             "Lexicon of Power"
++#define GOSSIP_TEXT_BANK                "Die Bank"
++#define GOSSIP_TEXT_IRONFORGE_BANK      "Bank von Eisenschmiede"
++#define GOSSIP_TEXT_STORMWIND_BANK      "Bank von Sturmwind"
++#define GOSSIP_TEXT_WINDRIDER           "Der Windreitermeister"
++#define GOSSIP_TEXT_GRYPHON             "Der Greifenmeister"
++#define GOSSIP_TEXT_BATHANDLER          "Der Fledermausführer"
++#define GOSSIP_TEXT_HIPPOGRYPH          "Der Hippogreifmeister"
++#define GOSSIP_TEXT_ZEPPLINMASTER       "Zeppelinmeister"
++#define GOSSIP_TEXT_DEEPRUNTRAM         "Die Tiefenbahn"
++#define GOSSIP_TEXT_FERRY               "Rut'theran Fähre"
++#define GOSSIP_TEXT_FLIGHTMASTER        "Der Flugmeister"
++#define GOSSIP_TEXT_AUCTIONHOUSE        "Das Auktionshaus"
++#define GOSSIP_TEXT_GUILDMASTER         "Der Gildenmeister"
++#define GOSSIP_TEXT_INN                 "Ein Gasthaus"
++#define GOSSIP_TEXT_MAILBOX             "Ein Briefkasten"
++#define GOSSIP_TEXT_STABLEMASTER        "Der Stallmeister"
++#define GOSSIP_TEXT_WEAPONMASTER        "Der Waffenmeister"
++#define GOSSIP_TEXT_OFFICERS            "Die Offiziersmesse"
++#define GOSSIP_TEXT_BATTLEMASTER        "Der Kampfmeister"
++#define GOSSIP_TEXT_BARBER              "Barbier"
++#define GOSSIP_TEXT_CLASSTRAINER        "Ein Lehrer für eine Klasse"
++#define GOSSIP_TEXT_PROFTRAINER         "Ein Lehrer für einen Beruf"
++#define GOSSIP_TEXT_LEXICON             "Lexikon der Macht"
+ 
+-#define GOSSIP_TEXT_ALTERACVALLEY       "Alterac Valley"
+-#define GOSSIP_TEXT_ARATHIBASIN         "Arathi Basin"
+-#define GOSSIP_TEXT_WARSONGULCH         "Warsong Gulch"
+-#define GOSSIP_TEXT_ARENA               "Arena"
+-#define GOSSIP_TEXT_EYEOFTHESTORM       "Eye of The Storm"
+-#define GOSSIP_TEXT_STRANDOFANCIENT     "Strand of the Ancients"
++#define GOSSIP_TEXT_ALTERACVALLEY       "Das Alteractal"
++#define GOSSIP_TEXT_ARATHIBASIN         "Das Arathibecken"
++#define GOSSIP_TEXT_WARSONGULCH         "Die Kriegshymnem Schlucht"
++#define GOSSIP_TEXT_ARENA               "Die Arena"
++#define GOSSIP_TEXT_EYEOFTHESTORM       "Das Auge des Sturms"
++#define GOSSIP_TEXT_STRANDOFANCIENT     "Strand der Uralten"
+ 
+-#define GOSSIP_TEXT_DEATH_KNIGHT        "Death Knight"
+-#define GOSSIP_TEXT_DRUID               "Druid"
+-#define GOSSIP_TEXT_HUNTER              "Hunter"
+-#define GOSSIP_TEXT_PRIEST              "Priest"
+-#define GOSSIP_TEXT_ROGUE               "Rogue"
+-#define GOSSIP_TEXT_WARRIOR             "Warrior"
++#define GOSSIP_TEXT_DEATH_KNIGHT        "Todesritter"
++#define GOSSIP_TEXT_DRUID               "Druide"
++#define GOSSIP_TEXT_HUNTER              "Jäger"
++#define GOSSIP_TEXT_PRIEST              "Priester"
++#define GOSSIP_TEXT_ROGUE               "Schurke"
++#define GOSSIP_TEXT_WARRIOR             "Krieger"
+ #define GOSSIP_TEXT_PALADIN             "Paladin"
+-#define GOSSIP_TEXT_SHAMAN              "Shaman"
+-#define GOSSIP_TEXT_MAGE                "Mage"
+-#define GOSSIP_TEXT_WARLOCK             "Warlock"
++#define GOSSIP_TEXT_SHAMAN              "Schamane"
++#define GOSSIP_TEXT_MAGE                "Magier"
++#define GOSSIP_TEXT_WARLOCK             "Hexenmeister"
+ 
+-#define GOSSIP_TEXT_ALCHEMY             "Alchemy"
+-#define GOSSIP_TEXT_BLACKSMITHING       "Blacksmithing"
+-#define GOSSIP_TEXT_COOKING             "Cooking"
+-#define GOSSIP_TEXT_ENCHANTING          "Enchanting"
+-#define GOSSIP_TEXT_ENGINEERING         "Engineering"
+-#define GOSSIP_TEXT_FIRSTAID            "First Aid"
+-#define GOSSIP_TEXT_HERBALISM           "Herbalism"
+-#define GOSSIP_TEXT_LEATHERWORKING      "Leatherworking"
+-#define GOSSIP_TEXT_TAILORING           "Tailoring"
+-#define GOSSIP_TEXT_MINING              "Mining"
+-#define GOSSIP_TEXT_FISHING             "Fishing"
+-#define GOSSIP_TEXT_SKINNING            "Skinning"
+-#define GOSSIP_TEXT_JEWELCRAFTING       "Jewelcrafting"
+-#define GOSSIP_TEXT_INSCRIPTION         "Inscription"
++#define GOSSIP_TEXT_ALCHEMY             "Alchimie"
++#define GOSSIP_TEXT_BLACKSMITHING       "Schmiedekunst"
++#define GOSSIP_TEXT_COOKING             "Kochkunst"
++#define GOSSIP_TEXT_ENCHANTING          "Verzauberkunst"
++#define GOSSIP_TEXT_ENGINEERING         "Ingenieurskunst"
++#define GOSSIP_TEXT_FIRSTAID            "Erste Hilfe"
++#define GOSSIP_TEXT_HERBALISM           "Kräuterkunde"
++#define GOSSIP_TEXT_LEATHERWORKING      "Lederverarbeitung"
++#define GOSSIP_TEXT_TAILORING           "Schneiderei"
++#define GOSSIP_TEXT_MINING              "Bergbau"
++#define GOSSIP_TEXT_FISHING             "Angeln"
++#define GOSSIP_TEXT_SKINNING            "Kürschnerei"
++#define GOSSIP_TEXT_JEWELCRAFTING       "Juwelenschleifen"
++#define GOSSIP_TEXT_INSCRIPTION         "Inschriftenkunde"
+ 
+ // Skill defines
+ 
+Index: scripts/guard/guards.cpp
+===================================================================
+--- scripts/guard/guards.cpp	(Revision 913)
++++ scripts/guard/guards.cpp	(Arbeitskopie)
+@@ -57,26 +57,26 @@
+ #define GOSSIP_SENDER_SEC_AUCTIONHOUSE        102
+ 
+ //script spesific gossip text
+-#define GOSSIP_TEXT_TAVERN                    "Worlds End Tavern"
+-#define GOSSIP_TEXT_BANKSCYERS                "Scyers bank"
+-#define GOSSIP_TEXT_BANKALDOR                 "Aldor Bank"
+-#define GOSSIP_TEXT_INNSCYERS                 "Scyers Inn"
+-#define GOSSIP_TEXT_INNALDOR                  "Aldor Inn"
+-#define GOSSIP_TEXT_STABLESCYERS              "Scyers Stable"
+-#define GOSSIP_TEXT_STABLEALDOR               "Aldor Stable"
+-#define GOSSIP_TEXT_BATTLEMASTERALLIANCE      "Alliance Battlemasters"
+-#define GOSSIP_TEXT_BATTLEMASTERHORDE         "Horde Battlemasters"
+-#define GOSSIP_TEXT_BATTLEMASTERARENA         "Arena Battlemasters"
+-#define GOSSIP_TEXT_MANALOOM                  "Mana Loom"
+-#define GOSSIP_TEXT_ALCHEMYLAB                "Alchemy Lab"
+-#define GOSSIP_TEXT_GEMMERCHANT               "Gem Merchant"
+-#define GOSSIP_TEXT_GEMSCYERS                 "Scyers Gem Merchant"
+-#define GOSSIP_TEXT_GEMALDOR                  "Aldor Gem Merchant"
++#define GOSSIP_TEXT_TAVERN                    "Taverne Weltenend"
++#define GOSSIP_TEXT_BANKSCYERS                "Bank der Seher"
++#define GOSSIP_TEXT_BANKALDOR                 "Bank der Aldor"
++#define GOSSIP_TEXT_INNSCYERS                 "Gasthaus der Seher"
++#define GOSSIP_TEXT_INNALDOR                  "Gasthaus der Aldor"
++#define GOSSIP_TEXT_STABLESCYERS              "Der Stall der Seher"
++#define GOSSIP_TEXT_STABLEALDOR               "Der Stall der Aldor"
++#define GOSSIP_TEXT_BATTLEMASTERALLIANCE      "Die Kampfmeister der Allianz"
++#define GOSSIP_TEXT_BATTLEMASTERHORDE         "Die Kampfmeister der Horde" 
++#define GOSSIP_TEXT_BATTLEMASTERARENA         "Die Kampfmeister der Arena"
++#define GOSSIP_TEXT_MANALOOM                  "Manawebrahmen"
++#define GOSSIP_TEXT_ALCHEMYLAB                "Alchemielabor"
++#define GOSSIP_TEXT_GEMMERCHANT               "Juwelenhändler"
++#define GOSSIP_TEXT_GEMSCYERS                 "Juwelenhändler der Seher"
++#define GOSSIP_TEXT_GEMALDOR                  "Juwelenhändler der Aldor"
+ 
+-#define GOSSIP_TEXT_AH_SILVERMOON_1           "Western Auction House"
+-#define GOSSIP_TEXT_AH_SILVERMOON_2           "Royal Exchange Auction House"
++#define GOSSIP_TEXT_AH_SILVERMOON_1           "Westliches Auktionshaus"
++#define GOSSIP_TEXT_AH_SILVERMOON_2           "Auktionshaus des königlichen Marktes"
+ 
+-#define GOSSIP_TEXT_INN_SILVERMOON_1          "Silvermoon City Inn"
++#define GOSSIP_TEXT_INN_SILVERMOON_1          "Gasthaus von Silbermond"
+ #define GOSSIP_TEXT_INN_SILVERMOON_2          "Wayfarer's Rest tavern"
+ 
+ //common used for guards in main cities
+@@ -302,23 +302,23 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Bank
+-            player->SEND_POI(-1257.8, 24.14, 7, 6, 0, "Thunder Bluff Bank");
++            player->SEND_POI(-1257.8, 24.14, 7, 6, 0, "Bank von Donnerfels");
+             player->SEND_GOSSIP_MENU(1292,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Wind master
+-            player->SEND_POI(-1196.43, 28.26, 7, 6, 0, "Wind Rider Roost");
++            player->SEND_POI(-1196.43, 28.26, 7, 6, 0, "Windreiterhorst");
+             player->SEND_GOSSIP_MENU(1293,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Guild master
+-            player->SEND_POI(-1296.5, 127.57, 7, 6, 0, "Thunder Bluff Civic Information");
++            player->SEND_POI(-1296.5, 127.57, 7, 6, 0, "Gildenmeister von Donnerfels");
+             player->SEND_GOSSIP_MENU(1291,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Inn
+-            player->SEND_POI(-1296, 39.7, 7, 6, 0, "Thunder Bluff Inn");
++            player->SEND_POI(-1296, 39.7, 7, 6, 0, "Gasthaus von Donnerfels");
+             player->SEND_GOSSIP_MENU(3153,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Mailbox
+-            player->SEND_POI(-1263.59, 44.36, 7, 6, 0, "Thunder Bluff Mailbox");
++            player->SEND_POI(-1263.59, 44.36, 7, 6, 0, "Briefkasten von Donnerfels");
+             player->SEND_GOSSIP_MENU(3154,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //Auction House
+@@ -389,27 +389,27 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Druid
+-            player->SEND_POI(-1054.47, -285, 7, 6, 0, "Hall of Elders");
++            player->SEND_POI(-1054.47, -285, 7, 6, 0, "Anhöhe der Ältesten");
+             player->SEND_GOSSIP_MENU(1294,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Hunter
+-            player->SEND_POI(-1416.32, -114.28, 7, 6, 0, "Hunter's Hall");
++            player->SEND_POI(-1416.32, -114.28, 7, 6, 0, "Anhöhe der Jäger");
+             player->SEND_GOSSIP_MENU(1295,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Mage
+-            player->SEND_POI(-1061.2, 195.5, 7, 6, 0, "Pools of Vision");
++            player->SEND_POI(-1061.2, 195.5, 7, 6, 0, "Teiche der Visionen");
+             player->SEND_GOSSIP_MENU(1296,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Priest
+-            player->SEND_POI(-1061.2, 195.5, 7, 6, 0, "Pools of Vision");
++            player->SEND_POI(-1061.2, 195.5, 7, 6, 0, "Teiche der Visionen");
+             player->SEND_GOSSIP_MENU(1297,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Shaman
+-            player->SEND_POI(-989.54, 278.25, 7, 6, 0, "Hall of Spirits");
++            player->SEND_POI(-989.54, 278.25, 7, 6, 0, "Anhöhe der Geister");
+             player->SEND_GOSSIP_MENU(1298,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //Warrior
+-            player->SEND_POI(-1416.32, -114.28, 7, 6, 0, "Hunter's Hall");
++            player->SEND_POI(-1416.32, -114.28, 7, 6, 0, "Anhöhe der Jäger");
+             player->SEND_GOSSIP_MENU(1299,_Creature->GetGUID());
+             break;
+     }
+@@ -420,39 +420,39 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Alchemy
+-            player->SEND_POI(-1085.56, 27.29, 7, 6, 0, "Bena's Alchemy");
++            player->SEND_POI(-1085.56, 27.29, 7, 6, 0, "Benas Alchimie");
+             player->SEND_GOSSIP_MENU(1332,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Blacksmithing
+-            player->SEND_POI(-1239.75, 104.88, 7, 6, 0, "Karn's Smithy");
++            player->SEND_POI(-1239.75, 104.88, 7, 6, 0, "Karns Schmiede");
+             player->SEND_GOSSIP_MENU(1333,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Cooking
+-            player->SEND_POI(-1214.5, -21.23, 7, 6, 0, "Aska's Kitchen");
++            player->SEND_POI(-1214.5, -21.23, 7, 6, 0, "Askas Küche");
+             player->SEND_GOSSIP_MENU(1334,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Enchanting
+-            player->SEND_POI(-1112.65, 48.26, 7, 6, 0, "Dawnstrider Enchanters");
++            player->SEND_POI(-1112.65, 48.26, 7, 6, 0, "Morgenwandlers Verzauberungen");
+             player->SEND_GOSSIP_MENU(1335,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //First Aid
+-            player->SEND_POI(-996.58, 200.5, 7, 6, 0, "Spiritual Healing");
++            player->SEND_POI(-996.58, 200.5, 7, 6, 0, "Spirituelle Heilung");
+             player->SEND_GOSSIP_MENU(1336,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //Fishing
+-            player->SEND_POI(-1169.35, -68.87, 7, 6, 0, "Mountaintop Bait & Tackle");
++            player->SEND_POI(-1169.35, -68.87, 7, 6, 0, "Gipfelbergs Köder und Ausrüstung");
+             player->SEND_GOSSIP_MENU(1337,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Herbalism
+-            player->SEND_POI(-1137.7, -1.51, 7, 6, 0, "Holistic Herbalism");
++            player->SEND_POI(-1137.7, -1.51, 7, 6, 0, "Ganzheitliche Kräuterkunde");
+             player->SEND_GOSSIP_MENU(1338,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Leatherworking
+-            player->SEND_POI(-1156.22, 66.86, 7, 6, 0, "Thunder Bluff Armorers");
++            player->SEND_POI(-1156.22, 66.86, 7, 6, 0, "Rüstungsschmiede von Donnerfels");
+             player->SEND_GOSSIP_MENU(1339,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 9:                    //Mining
+-            player->SEND_POI(-1249.17, 155, 7, 6, 0, "Stonehoof Geology");
++            player->SEND_POI(-1249.17, 155, 7, 6, 0, "Steinhufgeologie");
+             player->SEND_GOSSIP_MENU(1340,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 10:                   //Skinning
+@@ -460,7 +460,7 @@
+             player->SEND_GOSSIP_MENU(1343,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 11:                   //Tailoring
+-            player->SEND_POI(-1156.22, 66.86, 7, 6, 0, "Thunder Bluff Armorers");
++            player->SEND_POI(-1156.22, 66.86, 7, 6, 0, "Rüstungsschmiede von Donnerfels");
+             player->SEND_GOSSIP_MENU(1341,_Creature->GetGUID());
+             break;
+     }
+@@ -526,27 +526,27 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Auction house
+-            player->SEND_POI(9861.23, 2334.55, 7, 6, 0, "Darnassus Auction House");
++            player->SEND_POI(9861.23, 2334.55, 7, 6, 0, "Auktionshaus Darnassus");
+             player->SEND_GOSSIP_MENU(3833, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Bank
+-            player->SEND_POI(9938.45, 2512.35, 7, 6, 0, "Darnassus Bank");
++            player->SEND_POI(9938.45, 2512.35, 7, 6, 0, "Bank von Darnassus");
+             player->SEND_GOSSIP_MENU(3017, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Wind master
+-            player->SEND_POI(9945.65, 2618.94, 7, 6, 0, "Rut'theran Village");
++            player->SEND_POI(9945.65, 2618.94, 7, 6, 0, "Rut'theran");
+             player->SEND_GOSSIP_MENU(3018, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Guild master
+-            player->SEND_POI(10076.40, 2199.59, 7, 6, 0, "Darnassus Guild Master");
++            player->SEND_POI(10076.40, 2199.59, 7, 6, 0, "Gildenmeister von Darnassus");
+             player->SEND_GOSSIP_MENU(3019, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Inn
+-            player->SEND_POI(10133.29, 2222.52, 7, 6, 0, "Darnassus Inn");
++            player->SEND_POI(10133.29, 2222.52, 7, 6, 0, "Gasthaus von Darnassus");
+             player->SEND_GOSSIP_MENU(3020, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //Mailbox
+-            player->SEND_POI(9942.17, 2495.48, 7, 6, 0, "Darnassus Mailbox");
++            player->SEND_POI(9942.17, 2495.48, 7, 6, 0, "Briefkasten von Darnassus");
+             player->SEND_GOSSIP_MENU(3021, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Stable master
+@@ -554,7 +554,7 @@
+             player->SEND_GOSSIP_MENU(5980, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Weapon trainer
+-            player->SEND_POI(9907.11, 2329.70, 7, 6, 0, "Ilyenia Moonfire");
++            player->SEND_POI(9907.11, 2329.70, 7, 6, 0, "Ilyenia Mondfeuer");
+             player->SEND_GOSSIP_MENU(4517, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 9:                    //Battlemaster
+@@ -591,11 +591,11 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //AV
+-            player->SEND_POI(9923.61, 2327.43, 7, 6, 0, "Brogun Stoneshield");
++            player->SEND_POI(9923.61, 2327.43, 7, 6, 0, "Brogun Steinschild");
+             player->SEND_GOSSIP_MENU(7518, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //AB
+-            player->SEND_POI(9977.37, 2324.39, 7, 6, 0, "Keras Wolfheart");
++            player->SEND_POI(9977.37, 2324.39, 7, 6, 0, "Keras Wolfsherz");
+             player->SEND_GOSSIP_MENU(7651,  _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //WSG
+@@ -610,23 +610,23 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Druid
+-            player->SEND_POI(10186, 2570.46, 7, 6, 0, "Darnassus Druid Trainer");
++            player->SEND_POI(10186, 2570.46, 7, 6, 0, "Druidenlehrer von Darnassus");
+             player->SEND_GOSSIP_MENU(3024, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Hunter
+-            player->SEND_POI(10177.29, 2511.10, 7, 6, 0, "Darnassus Hunter Trainer");
++            player->SEND_POI(10177.29, 2511.10, 7, 6, 0, "Jägerlehrer von Darnassus");
+             player->SEND_GOSSIP_MENU(3023, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Priest
+-            player->SEND_POI(9659.12, 2524.88, 7, 6, 0, "Temple of the Moon");
++            player->SEND_POI(9659.12, 2524.88, 7, 6, 0, "Tempel des Mondes");
+             player->SEND_GOSSIP_MENU(3025, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Rogue
+-            player->SEND_POI(10122, 2599.12, 7, 6, 0, "Darnassus Rogue Trainer");
++            player->SEND_POI(10122, 2599.12, 7, 6, 0, "Schurkenlehrer von Darnassus");
+             player->SEND_GOSSIP_MENU(3026, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Warrior
+-            player->SEND_POI(9951.91, 2280.38, 7, 6, 0, "Warrior's Terrace");
++            player->SEND_POI(9951.91, 2280.38, 7, 6, 0, "Die Terrasse der Krieger");
+             player->SEND_GOSSIP_MENU(3033, _Creature->GetGUID());
+             break;
+     }
+@@ -637,39 +637,39 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Alchemy
+-            player->SEND_POI(10075.90, 2356.76, 7, 6, 0, "Darnassus Alchemy Trainer");
++            player->SEND_POI(10075.90, 2356.76, 7, 6, 0, "Alchemielehrer von Darnassus");
+             player->SEND_GOSSIP_MENU(3035, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Cooking
+-            player->SEND_POI(10088.59, 2419.21, 7, 6, 0, "Darnassus Cooking Trainer");
++            player->SEND_POI(10088.59, 2419.21, 7, 6, 0, "Kochkunstlehrer von Darnassus");
+             player->SEND_GOSSIP_MENU(3036, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Enchanting
+-            player->SEND_POI(10146.09, 2313.42, 7, 6, 0, "Darnassus Enchanting Trainer");
++            player->SEND_POI(10146.09, 2313.42, 7, 6, 0, "Verzauberungskunstlehrer von Darnassus");
+             player->SEND_GOSSIP_MENU(3337, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //First Aid
+-            player->SEND_POI(10150.09, 2390.43, 7, 6, 0, "Darnassus First Aid Trainer");
++            player->SEND_POI(10150.09, 2390.43, 7, 6, 0, "Lehrer für Erste Hilfe von Darnassus");
+             player->SEND_GOSSIP_MENU(3037, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Fishing
+-            player->SEND_POI(9836.20, 2432.17, 7, 6, 0, "Darnassus Fishing Trainer");
++            player->SEND_POI(9836.20, 2432.17, 7, 6, 0, "Angellehrer von Darnassus");
+             player->SEND_GOSSIP_MENU(3038, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //Herbalism
+-            player->SEND_POI(9757.17, 2430.16, 7, 6, 0, "Darnassus Herbalism Trainer");
++            player->SEND_POI(9757.17, 2430.16, 7, 6, 0, "Kräuterkundelehrer von Darnassus");
+             player->SEND_GOSSIP_MENU(3039, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Leatherworking
+-            player->SEND_POI(10086.59, 2255.77, 7, 6, 0, "Darnassus Leatherworking Trainer");
++            player->SEND_POI(10086.59, 2255.77, 7, 6, 0, "Lederverarbeitungslehrer von Darnassus");
+             player->SEND_GOSSIP_MENU(3040, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Skinning
+-            player->SEND_POI(10081.40, 2257.18, 7, 6, 0, "Darnassus Skinning Trainer");
++            player->SEND_POI(10081.40, 2257.18, 7, 6, 0, "Kürschnerlehrer von Darnassus");
+             player->SEND_GOSSIP_MENU(3042, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 9:                    //Tailoring
+-            player->SEND_POI(10079.70, 2268.19, 7, 6, 0, "Darnassus Tailor");
++            player->SEND_POI(10079.70, 2268.19, 7, 6, 0, "Schneider von Darnassus");
+             player->SEND_GOSSIP_MENU(3044, _Creature->GetGUID());
+             break;
+     }
+@@ -732,7 +732,7 @@
+             player->SEND_GOSSIP_MENU(4291,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Stable Master
+-            player->SEND_POI(-5604, -509.58, 7, 6, 0, "Shelby Stoneflint");
++            player->SEND_POI(-5604, -509.58, 7, 6, 0, "Shelby Steinflinte");
+             player->SEND_GOSSIP_MENU(5985,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //Class trainer
+@@ -768,15 +768,15 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Hunter
+-            player->SEND_POI(-5618.29, -454.25, 7, 6, 0, "Grif Wildheart");
++            player->SEND_POI(-5618.29, -454.25, 7, 6, 0, "Grif Wildherz");
+             player->SEND_GOSSIP_MENU(4293,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Mage
+-            player->SEND_POI(-5585.6, -539.99, 7, 6, 0, "Magis Sparkmantle");
++            player->SEND_POI(-5585.6, -539.99, 7, 6, 0, "Magis Funkelmantel");
+             player->SEND_GOSSIP_MENU(4294,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Paladin
+-            player->SEND_POI(-5585.6, -539.99, 7, 6, 0, "Azar Stronghammer");
++            player->SEND_POI(-5585.6, -539.99, 7, 6, 0, "Azar Hammerkraft");
+             player->SEND_GOSSIP_MENU(4295,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Priest
+@@ -788,11 +788,11 @@
+             player->SEND_GOSSIP_MENU(4297,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //Warlock
+-            player->SEND_POI(-5641.97, -523.76, 7, 6, 0, "Gimrizz Shadowcog");
++            player->SEND_POI(-5641.97, -523.76, 7, 6, 0, "Gimrizz Schattenrad");
+             player->SEND_GOSSIP_MENU(4298,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Warrior
+-            player->SEND_POI(-5604.79, -529.38, 7, 6, 0, "Granis Swiftaxe");
++            player->SEND_POI(-5604.79, -529.38, 7, 6, 0, "Granis Flinkaxt");
+             player->SEND_GOSSIP_MENU(4299,_Creature->GetGUID());
+             break;
+     }
+@@ -806,26 +806,26 @@
+             player->SEND_GOSSIP_MENU(4301,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Blacksmithing
+-            player->SEND_POI(-5584.72, -428.41, 7, 6, 0, "Tognus Flintfire");
++            player->SEND_POI(-5584.72, -428.41, 7, 6, 0, "Bengus Tiefenschmied");
+             player->SEND_GOSSIP_MENU(4302,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Cooking
+-            player->SEND_POI(-5596.85, -541.43, 7, 6, 0, "Gremlock Pilsnor");
++            player->SEND_POI(-5596.85, -541.43, 7, 6, 0, "Darly Riknussun");
+             player->SEND_GOSSIP_MENU(4303,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Enchanting
+             player->SEND_GOSSIP_MENU(4304,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Engineering
+-            player->SEND_POI(-5531, -666.53, 7, 6, 0, "Bronk Guzzlegear");
++            player->SEND_POI(-5531, -666.53, 7, 6, 0, "Sprungspindel Zischelgang");
+             player->SEND_GOSSIP_MENU(4305,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //First Aid
+-            player->SEND_POI(-5603.67, -523.57, 7, 6, 0, "Thamner Pol");
++            player->SEND_POI(-5603.67, -523.57, 7, 6, 0, "Nissa Feuerstein");
+             player->SEND_GOSSIP_MENU(4306,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Fishing
+-            player->SEND_POI(-5199.9, 58.58, 7, 6, 0, "Paxton Ganter");
++            player->SEND_POI(-5199.9, 58.58, 7, 6, 0, "Grimnur Steinmal");
+             player->SEND_GOSSIP_MENU(4307,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Herbalism
+@@ -835,7 +835,7 @@
+             player->SEND_GOSSIP_MENU(4310,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 10:                   //Mining
+-            player->SEND_POI(-5531, -666.53, 7, 6, 0, "Yarr Hamerstone");
++            player->SEND_POI(-5531, -666.53, 7, 6, 0, "Geofram Geröllzeh");
+             player->SEND_GOSSIP_MENU(4311,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 11:                   //Skinning
+@@ -894,7 +894,7 @@
+             player->SEND_GOSSIP_MENU(4033,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Inn
+-            player->SEND_POI(338.7, -4688.87, 7, 6, 0, "Razor Hill Inn");
++            player->SEND_POI(338.7, -4688.87, 7, 6, 0, "Gasthaus von Klingenhügel");
+             player->SEND_GOSSIP_MENU(4034,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Stable master
+@@ -954,11 +954,11 @@
+             player->SEND_GOSSIP_MENU(4017,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //Warlock
+-            player->SEND_POI(355.88, -4836.45, 7, 6, 0, "Dhugru Gorelust");
++            player->SEND_POI(355.88, -4836.45, 7, 6, 0, "Dhugru Blutgier");
+             player->SEND_GOSSIP_MENU(4018,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Warrior
+-            player->SEND_POI(312.3, -4824.66, 7, 6, 0, "Tarshaw Jaggedscar");
++            player->SEND_POI(312.3, -4824.66, 7, 6, 0, "Tarshaw Raunarbe");
+             player->SEND_GOSSIP_MENU(4019,_Creature->GetGUID());
+             break;
+     }
+@@ -1065,7 +1065,7 @@
+             player->SEND_GOSSIP_MENU(4262,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Inn
+-            player->SEND_POI(-9459.34, 42.08, 7, 6, 0, "Lion's Pride Inn");
++            player->SEND_POI(-9459.34, 42.08, 7, 6, 0, "Gasthaus Zur Höhle des Löwen");
+             player->SEND_GOSSIP_MENU(4263,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Stable Master
+@@ -1116,11 +1116,11 @@
+             player->SEND_GOSSIP_MENU(4268,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Paladin
+-            player->SEND_POI(-9469, 108.05, 7, 6, 0, "Brother Wilhelm");
++            player->SEND_POI(-9469, 108.05, 7, 6, 0, "Bruder Wilhelm");
+             player->SEND_GOSSIP_MENU(4269,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Priest
+-            player->SEND_POI(-9461.07, 32.6, 7, 6, 0, "Priestess Josetta");
++            player->SEND_POI(-9461.07, 32.6, 7, 6, 0, "Priesterin Josetta");
+             player->SEND_GOSSIP_MENU(4267,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //Rogue
+@@ -1128,7 +1128,7 @@
+             player->SEND_GOSSIP_MENU(4270,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Warlock
+-            player->SEND_POI(-9473.21, -4.08, 7, 6, 0, "Maximillian Crowe");
++            player->SEND_POI(-9473.21, -4.08, 7, 6, 0, "Maximillian Raab");
+             player->SEND_GOSSIP_MENU(4272,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Warrior
+@@ -1147,7 +1147,7 @@
+             player->SEND_GOSSIP_MENU(4274,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Blacksmithing
+-            player->SEND_POI(-9456.58, 87.90, 7, 6, 0, "Smith Argus");
++            player->SEND_POI(-9456.58, 87.90, 7, 6, 0, "Schmied Argus");
+             player->SEND_GOSSIP_MENU(4275,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Cooking
+@@ -1165,22 +1165,22 @@
+             player->SEND_GOSSIP_MENU(4279,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Fishing
+-            player->SEND_POI(-9386.54, -118.73, 7, 6, 0, "Lee Brown");
++            player->SEND_POI(-9386.54, -118.73, 7, 6, 0, "Lee Braun");
+             player->SEND_GOSSIP_MENU(4280,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Herbalism
+-            player->SEND_POI(-9060.70, 149.23, 7, 6, 0, "Herbalist Pomeroy");
++            player->SEND_POI(-9060.70, 149.23, 7, 6, 0, "Kräuterkundige Pomeroy");
+             player->SEND_GOSSIP_MENU(4281,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 9:                    //Leatherworking
+-            player->SEND_POI(-9376.12, -75.23, 7, 6, 0, "Adele Fielder");
++            player->SEND_POI(-9376.12, -75.23, 7, 6, 0, "Adele Fädler");
+             player->SEND_GOSSIP_MENU(4282,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 10:                   //Mining
+             player->SEND_GOSSIP_MENU(4283,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 11:                   //Skinning
+-            player->SEND_POI(-9536.91, -1212.76, 7, 6, 0, "Helene Peltskinner");
++            player->SEND_POI(-9536.91, -1212.76, 7, 6, 0, "Helene Pelzschneider");
+             player->SEND_GOSSIP_MENU(4284,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 12:                   //Tailoring
+@@ -1405,35 +1405,35 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Auction house
+-            player->SEND_POI(-4023.6, -11739.3, 7, 6, 0, "Exodar Auction House");
++            player->SEND_POI(-4023.6, -11739.3, 7, 6, 0, "Auktionshaus von Exodar");
+             player->SEND_GOSSIP_MENU(9528, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Bank
+-            player->SEND_POI(-3923.89, -11544.5, 7, 6, 0, "Exodar Bank");
++            player->SEND_POI(-3923.89, -11544.5, 7, 6, 0, "Bank von Exodar");
+             player->SEND_GOSSIP_MENU(9529, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Guild master
+-            player->SEND_POI(-4092.57, -11626.5, 7, 6, 0, "Exodar Guild Master");
++            player->SEND_POI(-4092.57, -11626.5, 7, 6, 0, "Gildenhaus von Exodar");
+             player->SEND_GOSSIP_MENU(9539, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Hippogryph master
+-            player->SEND_POI(-4060.46, -11787.1, 7, 6, 0, "Exodar Hippogryph Master");
++            player->SEND_POI(-4060.46, -11787.1, 7, 6, 0, "Greifenmeister von Exodar");
+             player->SEND_GOSSIP_MENU(9530, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Inn
+-            player->SEND_POI(-3741.87, -11695.1, 7, 6, 0, "Exodar Inn");
++            player->SEND_POI(-3741.87, -11695.1, 7, 6, 0, "Gasthaus von Exodar");
+             player->SEND_GOSSIP_MENU(9545, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //Mailbox
+-            player->SEND_POI(-3972.5, -11696.0, 7, 6, 0, "Mailbox");
++            player->SEND_POI(-3972.5, -11696.0, 7, 6, 0, "Briefkasten");
+             player->SEND_GOSSIP_MENU(10254, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Stable master
+-            player->SEND_POI(-3786.5, -11702.5, 7, 6, 0, "Stable Master Arthaid");
++            player->SEND_POI(-3786.5, -11702.5, 7, 6, 0, "Stallmeister Arthaid");
+             player->SEND_GOSSIP_MENU(9558, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Weapon trainer
+-            player->SEND_POI(-4215.68, -11628.9, 7, 6, 0, "Weapon Master Handiir");
++            player->SEND_POI(-4215.68, -11628.9, 7, 6, 0, "Waffenmeister Handiir");
+             player->SEND_GOSSIP_MENU(9565, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 9:                    //Battlemaster
+@@ -1478,23 +1478,23 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //AV
+-            player->SEND_POI(-3978.1, -11357, 7, 6, 0, "Alterac Valley Battlemaster");
++            player->SEND_POI(-3978.1, -11357, 7, 6, 0, "Kampfmeister für das Alteractal");
+             player->SEND_GOSSIP_MENU(9531, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //AB
+-            player->SEND_POI(-3998.9, -11345.2, 7, 6, 0, "Arathi Basin Battlemaster");
++            player->SEND_POI(-3998.9, -11345.2, 7, 6, 0, "Kampfmeister für das Alteractal");
+             player->SEND_GOSSIP_MENU(9531,  _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //A
+-            player->SEND_POI(-3759.27, -11695.63, 7, 6, 0, "Miglik Blotstrom");
++            player->SEND_POI(-3759.27, -11695.63, 7, 6, 0, "Miglik Klecksstrom");
+             player->SEND_GOSSIP_MENU(10223, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //EOS
+-            player->SEND_POI(-3978.1, -11357, 7, 6, 0, "Eye Of The Storm Battlemaster");
++            player->SEND_POI(-3978.1, -11357, 7, 6, 0, "Kampfmeister für das Auge des Sturms");
+             player->SEND_GOSSIP_MENU(9531, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //WSG
+-            player->SEND_POI(-3977.5, -11381.2, 7, 6, 0, "Warsong Gulch Battlemaster");
++            player->SEND_POI(-3977.5, -11381.2, 7, 6, 0, "Kampfmeister für die Kriegshymnenschlucht");
+             player->SEND_GOSSIP_MENU(9531, _Creature->GetGUID());
+             break;
+     }
+@@ -1505,31 +1505,31 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Druid
+-            player->SEND_POI(-4276.0, -11495, 7, 6, 0, "Exodar Druid Trainer");
++		player->SEND_POI(-4276.0, -11495, 7, 6, 0, "Druidenlehrer von Exodar");
+             player->SEND_GOSSIP_MENU(9534, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Hunter
+-            player->SEND_POI(-4210.6, -11575.2, 7, 6, 0, "Exodar Hunter Trainer");
++            player->SEND_POI(-4210.6, -11575.2, 7, 6, 0, "Jägerlehrer von Exodar");
+             player->SEND_GOSSIP_MENU(9544, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Mage
+-            player->SEND_POI(-4057.32, -11556.5, 7, 6, 0, "Exodar Mage Trainer");
++            player->SEND_POI(-4057.32, -11556.5, 7, 6, 0, "Magierlehrer von Exodar");
+             player->SEND_GOSSIP_MENU(9550, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Paladin
+-            player->SEND_POI(-4191.2, -11470.4, 7, 6, 0, "Exodar Paladin Trainer");
++            player->SEND_POI(-4191.2, -11470.4, 7, 6, 0, "Paladinlehrer von Exodar");
+             player->SEND_GOSSIP_MENU(9553, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Priest
+-            player->SEND_POI(-3969.63, -11482.8, 7, 6, 0, "Exodar Priest Trainer");
++            player->SEND_POI(-3969.63, -11482.8, 7, 6, 0, "Priesterlehrer von Exodar");
+             player->SEND_GOSSIP_MENU(9554, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //Shaman
+-            player->SEND_POI(-3805.5, -11380.7, 7, 6, 0, "Exodar Shaman Trainer");
++            player->SEND_POI(-3805.5, -11380.7, 7, 6, 0, "Schamanenlehrer von Exodar");
+             player->SEND_GOSSIP_MENU(9556, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Warrior
+-            player->SEND_POI(-4189.43, -11653.7, 7, 6, 0, "Exodar Warrior Trainer");
++            player->SEND_POI(-4189.43, -11653.7, 7, 6, 0, "Kriegerlehrer von Exodar");
+             player->SEND_GOSSIP_MENU(9562, _Creature->GetGUID());
+             break;
+     }
+@@ -1540,55 +1540,55 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Alchemy
+-            player->SEND_POI(-4040.6, -11364.5, 7, 6, 0, "Exodar Alchemy Trainer");
++            player->SEND_POI(-4040.6, -11364.5, 7, 6, 0, "Alchimilehrer von Exodar");
+             player->SEND_GOSSIP_MENU(9527, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Blacksmithing
+-            player->SEND_POI(-4229.5, -11706, 7, 6, 0, "Exodar Blacksmithing Trainer");
++            player->SEND_POI(-4229.5, -11706, 7, 6, 0, "Schmiedekunstlehrer von Exodar");
+             player->SEND_GOSSIP_MENU(9532, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Cooking
+-            player->SEND_POI(-3798.3, -11651.7, 7, 6, 0, "Exodar Cooking Trainer");
++            player->SEND_POI(-3798.3, -11651.7, 7, 6, 0, "Kochkunstlehrer von Exodar");
+             player->SEND_GOSSIP_MENU(9551, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Enchanting
+-            player->SEND_POI(-3889.3, -11495, 7, 6, 0, "Exodar Enchanting Trainer");
++            player->SEND_POI(-3889.3, -11495, 7, 6, 0, "Verzauberkunstlehrer von Exodar");
+             player->SEND_GOSSIP_MENU(9535, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Engineering
+-            player->SEND_POI(-4257.68, -11640.3, 7, 6, 0, "Exodar Engineering Trainer");
++            player->SEND_POI(-4257.68, -11640.3, 7, 6, 0, "Ingenieurskunstlehrer von Exodar");
+             player->SEND_GOSSIP_MENU(9536, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //First Aid
+-            player->SEND_POI(-3769.5, -11479.6, 7, 6, 0, "Exodar First Aid Trainer");
++            player->SEND_POI(-3769.5, -11479.6, 7, 6, 0, "Erste Hilfe Lehrer von Exodar");
+             player->SEND_GOSSIP_MENU(9537, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Fishing
+-            player->SEND_POI(-3725.5, -11385.2, 7, 6, 0, "Exodar Fishing Trainer");
++            player->SEND_POI(-3725.5, -11385.2, 7, 6, 0, "Angellehrer von Exodar");
+             player->SEND_GOSSIP_MENU(9538, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Jewelcrafting
+-            player->SEND_POI(-3783, -11546, 7, 6, 0, "Exodar Jewelcrafting Trainer");
++            player->SEND_POI(-3783, -11546, 7, 6, 0, "Lehrer für Juwelenschleifen von Exodar");
+             player->SEND_GOSSIP_MENU(9547, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 9:                    //Herbalism
+-            player->SEND_POI(-4040.6, -11364.5, 7, 6, 0, "Exodar Herbalist Trainer");
++            player->SEND_POI(-4040.6, -11364.5, 7, 6, 0, "Kräuterkundelehrer von Exodar");
+             player->SEND_GOSSIP_MENU(9543, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 10:                   //Leatherworking
+-            player->SEND_POI(-4140.6, -11776.7, 7, 6, 0, "Exodar Leatherworking Trainer");
++            player->SEND_POI(-4140.6, -11776.7, 7, 6, 0, "Lederverarbeitungslehrer von Exodar");
+             player->SEND_GOSSIP_MENU(9549, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 11:                   //Mining
+-            player->SEND_POI(-4228, -11697, 7, 6, 0, "Exodar Mining Trainer");
++            player->SEND_POI(-4228, -11697, 7, 6, 0, "Bergbaulehrer von Exodar");
+             player->SEND_GOSSIP_MENU(9552, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 12:                   //Skinning
+-            player->SEND_POI(-4134.97, -11760.5, 7, 6, 0, "Exodar Skinning Trainer");
++            player->SEND_POI(-4134.97, -11760.5, 7, 6, 0, "Kürschnereilehrer von Exodar");
+             player->SEND_GOSSIP_MENU(9557, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 13:                   //Tailoring
+-            player->SEND_POI(-4092.5, -11744.5, 7, 6, 0, "Exodar Tailor Trainer");
++            player->SEND_POI(-4092.5, -11744.5, 7, 6, 0, "Schneidereilehrer von Exodar");
+             player->SEND_GOSSIP_MENU(9559, _Creature->GetGUID());
+             break;
+     }
+@@ -1642,39 +1642,39 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Auction House
+-            player->SEND_POI(-4957.39, -911.6, 7, 6, 0, "Ironforge Auction House");
++            player->SEND_POI(-4957.39, -911.6, 7, 6, 0, "Auktionshaus von Eisenschmiede");
+             player->SEND_GOSSIP_MENU(3014, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Bank
+-            player->SEND_POI(-4891.91, -991.47, 7, 6, 0, "The Vault");
++            player->SEND_POI(-4891.91, -991.47, 7, 6, 0, "Das Gewölbe");
+             player->SEND_GOSSIP_MENU(2761, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Tram
+-            player->SEND_POI(-4835.27, -1294.69, 7, 6, 0, "Deeprun Tram");
++            player->SEND_POI(-4835.27, -1294.69, 7, 6, 0, "Die Tiefenbahn");
+             player->SEND_GOSSIP_MENU(3814, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Gryphon Master
+-            player->SEND_POI(-4821.52, -1152.3, 7, 6, 0, "Ironforge Gryphon Master");
++            player->SEND_POI(-4821.52, -1152.3, 7, 6, 0, "Greifenmeister von Eisenschmiede");
+             player->SEND_GOSSIP_MENU(2762, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Guild Master
+-            player->SEND_POI(-5021, -996.45, 7, 6, 0, "Ironforge Visitor's Center");
++            player->SEND_POI(-5021, -996.45, 7, 6, 0, "Besucherzentrum von Eisenschmiede");
+             player->SEND_GOSSIP_MENU(2764, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //Inn
+-            player->SEND_POI(-4850.47, -872.57, 7, 6, 0, "Stonefire Tavern");
++            player->SEND_POI(-4850.47, -872.57, 7, 6, 0, "Steinfeuertaverne");
+             player->SEND_GOSSIP_MENU(2768, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Mailbox
+-            player->SEND_POI(-4845.7, -880.55, 7, 6, 0, "Ironforge Mailbox");
++            player->SEND_POI(-4845.7, -880.55, 7, 6, 0, "Briefkasten von Eisenschmiede");
+             player->SEND_GOSSIP_MENU(2769, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Stable Master
+-            player->SEND_POI(-5010.2, -1262, 7, 6, 0, "Ulbrek Firehand");
++            player->SEND_POI(-5010.2, -1262, 7, 6, 0, "Ulbrek Feuerhand");
+             player->SEND_GOSSIP_MENU(5986, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 9:                    //Weapons Trainer
+-            player->SEND_POI(-5040, -1201.88, 7, 6, 0, "Bixi and Buliwyf");
++            player->SEND_POI(-5040, -1201.88, 7, 6, 0, "Bixi und Buliwyf");
+             player->SEND_GOSSIP_MENU(4518, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 10:                   //Battlemaster
+@@ -1717,11 +1717,11 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //AV
+-            player->SEND_POI(-5047.87, -1263.77, 7, 6, 0, "Glordrum Steelbeard");
++            player->SEND_POI(-5047.87, -1263.77, 7, 6, 0, "Glordrum Stahlbart");
+             player->SEND_GOSSIP_MENU(7483, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //AB
+-            player->SEND_POI(-5038.37, -1266.39, 7, 6, 0, "Donal Osgood");
++            player->SEND_POI(-5038.37, -1266.39, 7, 6, 0, "Donal Gutmark");
+             player->SEND_GOSSIP_MENU(7649, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //WSG
+@@ -1736,35 +1736,35 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Hunter
+-            player->SEND_POI(-5023, -1253.68, 7, 6, 0, "Hall of Arms");
++            player->SEND_POI(-5023, -1253.68, 7, 6, 0, "Halle der Waffen");
+             player->SEND_GOSSIP_MENU(2770, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Mage
+-            player->SEND_POI(-4627, -926.45, 7, 6, 0, "Hall of Mysteries");
++            player->SEND_POI(-4627, -926.45, 7, 6, 0, "Halle der Mysterien");
+             player->SEND_GOSSIP_MENU(2771, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Paladin
+-            player->SEND_POI(-4627.02, -926.45, 7, 6, 0, "Hall of Mysteries");
++            player->SEND_POI(-4627.02, -926.45, 7, 6, 0, "Halle der Mysterien");
+             player->SEND_GOSSIP_MENU(2773, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Priest
+-            player->SEND_POI(-4627, -926.45, 7, 6, 0, "Hall of Mysteries");
++            player->SEND_POI(-4627, -926.45, 7, 6, 0, "Halle der Mysterien");
+             player->SEND_GOSSIP_MENU(2772, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Rogue
+-            player->SEND_POI(-4647.83, -1124, 7, 6, 0, "Ironforge Rogue Trainer");
++            player->SEND_POI(-4647.83, -1124, 7, 6, 0, "Schurkenlehrer von Eisenschmiede");
+             player->SEND_GOSSIP_MENU(2774, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //Warlock
+-            player->SEND_POI(-4605, -1110.45, 7, 6, 0, "Ironforge Warlock Trainer");
++            player->SEND_POI(-4605, -1110.45, 7, 6, 0, "Hexenmeisterlehrer von Eisenschmiede");
+             player->SEND_GOSSIP_MENU(2775, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Warrior
+-            player->SEND_POI(-5023.08, -1253.68, 7, 6, 0, "Hall of Arms");
++            player->SEND_POI(-5023.08, -1253.68, 7, 6, 0, "Halle der Waffen");
+             player->SEND_GOSSIP_MENU(2776, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Shaman
+-            player->SEND_POI(-4732, -1147, 7, 6, 0, "Ironforge Shaman Trainer");
++            player->SEND_POI(-4732, -1147, 7, 6, 0, "Schamanenlehrer von Eisenschmiede");
+                                                             //incorrect id
+             player->SEND_GOSSIP_MENU(2766, _Creature->GetGUID());
+             break;
+@@ -1776,51 +1776,51 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Alchemy
+-            player->SEND_POI(-4858.5, -1241.83, 7, 6, 0, "Berryfizz's Potions and Mixed Drinks");
++            player->SEND_POI(-4858.5, -1241.83, 7, 6, 0, "Berryfitz's Tränke und Mischgetränke");
+             player->SEND_GOSSIP_MENU(2794, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Blacksmithing
+-            player->SEND_POI(-4796.97, -1110.17, 7, 6, 0, "The Great Forge");
++            player->SEND_POI(-4796.97, -1110.17, 7, 6, 0, "Die große Schmiede");
+             player->SEND_GOSSIP_MENU(2795, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Cooking
+-            player->SEND_POI(-4767.83, -1184.59, 7, 6, 0, "The Bronze Kettle");
++            player->SEND_POI(-4767.83, -1184.59, 7, 6, 0, "Zum Bronzekessel");
+             player->SEND_GOSSIP_MENU(2796, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Enchanting
+-            player->SEND_POI(-4803.72, -1196.53, 7, 6, 0, "Thistlefuzz Arcanery");
++            player->SEND_POI(-4803.72, -1196.53, 7, 6, 0, "Arkanarien Distelflaum");
+             player->SEND_GOSSIP_MENU(2797, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Engineering
+-            player->SEND_POI(-4799.56, -1250.23, 7, 6, 0, "Springspindle's Gadgets");
++            player->SEND_POI(-4799.56, -1250.23, 7, 6, 0, "Gerätehandel Sprungspindel");
+             player->SEND_GOSSIP_MENU(2798, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //First Aid
+-            player->SEND_POI(-4881.6, -1153.13, 7, 6, 0, "Ironforge Physician");
++            player->SEND_POI(-4881.6, -1153.13, 7, 6, 0, "Heiler von Eisenschmiede");
+             player->SEND_GOSSIP_MENU(2799, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Fishing
+-            player->SEND_POI(-4597.91, -1091.93, 7, 6, 0, "Traveling Fisherman");
++            player->SEND_POI(-4597.91, -1091.93, 7, 6, 0, "Reisender Angler");
+             player->SEND_GOSSIP_MENU(2800, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Herbalism
+-            player->SEND_POI(-4876.9, -1151.92, 7, 6, 0, "Ironforge Physician");
++            player->SEND_POI(-4876.9, -1151.92, 7, 6, 0, "Heiler von Eisenschmiede");
+             player->SEND_GOSSIP_MENU(2801, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 9:                    //Leatherworking
+-            player->SEND_POI(-4745, -1027.57, 7, 6, 0, "Finespindle's Leather Goods");
++            player->SEND_POI(-4745, -1027.57, 7, 6, 0, "Lederwaren Feinspindel");
+             player->SEND_GOSSIP_MENU(2802, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 10:                   //Minning
+-            player->SEND_POI(-4705.06, -1116.43, 7, 6, 0, "Deepmountain Mining Guild");
++            player->SEND_POI(-4705.06, -1116.43, 7, 6, 0, "Tiefenbergbaugilde");
+             player->SEND_GOSSIP_MENU(2804, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 11:                   //Skinning
+-            player->SEND_POI(-4745, -1027.57, 7, 6, 0, "Finespindle's Leather Goods");
++            player->SEND_POI(-4745, -1027.57, 7, 6, 0, "Lederwaren Feinspindel");
+             player->SEND_GOSSIP_MENU(2805, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 12:                   //Tailoring
+-            player->SEND_POI(-4719.60, -1056.96, 7, 6, 0, "Stonebrow's Clothier");
++            player->SEND_POI(-4719.60, -1056.96, 7, 6, 0, "Tuchmacherei Steinbraue");
+             player->SEND_GOSSIP_MENU(2807, _Creature->GetGUID());
+             break;
+     }
+@@ -1874,7 +1874,7 @@
+             player->SEND_GOSSIP_MENU(4052,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Inn
+-            player->SEND_POI(-2361.38, -349.19, 7, 6, 0, "Bloodhoof Village Inn");
++            player->SEND_POI(-2361.38, -349.19, 7, 6, 0, "Gasthaus der Bluthufe");
+             player->SEND_GOSSIP_MENU(4053,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Stable master
+@@ -1910,19 +1910,19 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Druid
+-            player->SEND_POI(-2312.15, -443.69, 7, 6, 0, "Gennia Runetotem");
++            player->SEND_POI(-2312.15, -443.69, 7, 6, 0, "Gennia Runentotem");
+             player->SEND_GOSSIP_MENU(4054,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Hunter
+-            player->SEND_POI(-2178.14, -406.14, 7, 6, 0, "Yaw Sharpmane");
++            player->SEND_POI(-2178.14, -406.14, 7, 6, 0, "Yaw Scharfmäne");
+             player->SEND_GOSSIP_MENU(4055,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Shaman
+-            player->SEND_POI(-2301.5, -439.87, 7, 6, 0, "Narm Skychaser");
++		player->SEND_POI(-2301.5, -439.87, 7, 6, 0, "Narm Himmelsjäger");
+             player->SEND_GOSSIP_MENU(4056,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Warrior
+-            player->SEND_POI(-2345.43, -494.11, 7, 6, 0, "Krang Stonehoof");
++            player->SEND_POI(-2345.43, -494.11, 7, 6, 0, "Krang Steinhuf");
+             player->SEND_GOSSIP_MENU(4057,_Creature->GetGUID());
+             break;
+     }
+@@ -1939,32 +1939,32 @@
+             player->SEND_GOSSIP_MENU(4059,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Cooking
+-            player->SEND_POI(-2263.34, -287.91, 7, 6, 0, "Pyall Silentstride");
++            player->SEND_POI(-2263.34, -287.91, 7, 6, 0, "Pyall Leisetreter");
+             player->SEND_GOSSIP_MENU(4060,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Enchanting
+             player->SEND_GOSSIP_MENU(4061,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //First Aid
+-            player->SEND_POI(-2353.52, -355.82, 7, 6, 0, "Vira Younghoof");
++            player->SEND_POI(-2353.52, -355.82, 7, 6, 0, "Vira Junghuf");
+             player->SEND_GOSSIP_MENU(4062,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //Fishing
+-            player->SEND_POI(-2349.21, -241.37, 7, 6, 0, "Uthan Stillwater");
++            player->SEND_POI(-2349.21, -241.37, 7, 6, 0, "Uthan Stillwasser");
+             player->SEND_GOSSIP_MENU(4063,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Herbalism
+             player->SEND_GOSSIP_MENU(4064,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Leatherworking
+-            player->SEND_POI(-2257.12, -288.63, 7, 6, 0, "Chaw Stronghide");
++            player->SEND_POI(-2257.12, -288.63, 7, 6, 0, "Chaw Starkfell");
+             player->SEND_GOSSIP_MENU(4065,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 9:                    //Mining
+             player->SEND_GOSSIP_MENU(4066,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 10:                   //Skinning
+-            player->SEND_POI(-2252.94, -291.32, 7, 6, 0, "Yonn Deepcut");
++            player->SEND_POI(-2252.94, -291.32, 7, 6, 0, "Yonn Pelzscherer");
+             player->SEND_GOSSIP_MENU(4067,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 11:                   //Tailoring
+@@ -2022,35 +2022,35 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Bank
+-            player->SEND_POI(1631.51, -4375.33, 7, 6, 0, "Bank of Orgrimmar");
++            player->SEND_POI(1631.51, -4375.33, 7, 6, 0, "Bank von Orgrimmar");
+             player->SEND_GOSSIP_MENU(2554,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //wind rider
+-            player->SEND_POI(1676.6, -4332.72, 7, 6, 0, "The Sky Tower");
++            player->SEND_POI(1676.6, -4332.72, 7, 6, 0, "Der Himmelsturm");
+             player->SEND_GOSSIP_MENU(2555,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //guild master
+-            player->SEND_POI(1576.93, -4294.75, 7, 6, 0, "Horde Embassy");
++            player->SEND_POI(1576.93, -4294.75, 7, 6, 0, "Botschaft der Horde");
+             player->SEND_GOSSIP_MENU(2556,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Inn
+-            player->SEND_POI(1644.51, -4447.27, 7, 6, 0, "Orgrimmar Inn");
++            player->SEND_POI(1644.51, -4447.27, 7, 6, 0, "Gasthaus von Orgrimmar");
+             player->SEND_GOSSIP_MENU(2557,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //mailbox
+-            player->SEND_POI(1622.53, -4388.79, 7, 6, 0, "Orgrimmar Mailbox");
++            player->SEND_POI(1622.53, -4388.79, 7, 6, 0, "Briefkasten von Orgrimmar");
+             player->SEND_GOSSIP_MENU(2558,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //auction house
+-            player->SEND_POI(1679.21, -4450.1, 7, 6, 0, "Orgrimmar Auction House");
++            player->SEND_POI(1679.21, -4450.1, 7, 6, 0, "Auktionshaus von Orgrimmar");
+             player->SEND_GOSSIP_MENU(3075,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //zeppelin
+-            player->SEND_POI(1337.36, -4632.7, 7, 6, 0, "Orgrimmar Zeppelin Tower");
++            player->SEND_POI(1337.36, -4632.7, 7, 6, 0, "Zeppelinturm von Orgrimmar");
+             player->SEND_GOSSIP_MENU(3173,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //weapon master
+-            player->SEND_POI(2092.56, -4823.95, 7, 6, 0, "Sayoc & Hanashi");
++            player->SEND_POI(2092.56, -4823.95, 7, 6, 0, "Sayoc und Hanashi");
+             player->SEND_GOSSIP_MENU(4519,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 9:                    //stable master
+@@ -2058,7 +2058,7 @@
+             player->SEND_GOSSIP_MENU(5974,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 10:                   //officers lounge
+-            player->SEND_POI(1633.56, -4249.37, 7, 6, 0, "Hall of Legends");
++            player->SEND_POI(1633.56, -4249.37, 7, 6, 0, "Die Halle der Legenden");
+             player->SEND_GOSSIP_MENU(7046,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 11:                   //battlemaster
+@@ -2101,15 +2101,15 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //AV
+-            player->SEND_POI(1983.92, -4794.2, 7, 6, 0, "Hall of the Brave");
++            player->SEND_POI(1983.92, -4794.2, 7, 6, 0, "Das Tal der Ehre");
+             player->SEND_GOSSIP_MENU(7484,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //AB
+-            player->SEND_POI(1983.92, -4794.2, 7, 6, 0, "Hall of the Brave");
++            player->SEND_POI(1983.92, -4794.2, 7, 6, 0, "Das Tal der Ehre");
+             player->SEND_GOSSIP_MENU(7644,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //WSG
+-            player->SEND_POI(1983.92, -4794.2, 7, 6, 0, "Hall of the Brave");
++            player->SEND_POI(1983.92, -4794.2, 7, 6, 0, "Das Tal der Ehre");
+             player->SEND_GOSSIP_MENU(7520,_Creature->GetGUID());
+             break;
+     }
+@@ -2120,35 +2120,35 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Hunter
+-            player->SEND_POI(2114.84, -4625.31, 7, 6, 0, "Orgrimmar Hunter's Hall");
++            player->SEND_POI(2114.84, -4625.31, 7, 6, 0, "Jägerhalle von Orgrimmar");
+             player->SEND_GOSSIP_MENU(2559,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Mage
+-            player->SEND_POI(1451.26, -4223.33, 7, 6, 0, "Darkbriar Lodge");
++            player->SEND_POI(1451.26, -4223.33, 7, 6, 0, "Dunkeldornenlodge");
+             player->SEND_GOSSIP_MENU(2560,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Priest
+-            player->SEND_POI(1442.21, -4183.24, 7, 6, 0, "Spirit Lodge");
++            player->SEND_POI(1442.21, -4183.24, 7, 6, 0, "Geisterlodge"	);
+             player->SEND_GOSSIP_MENU(2561,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Shaman
+-            player->SEND_POI(1925.34, -4181.89, 7, 6, 0, "Thrall's Fortress");
++            player->SEND_POI(1925.34, -4181.89, 7, 6, 0, "Thralls Festung");
+             player->SEND_GOSSIP_MENU(2562,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Rogue
+-            player->SEND_POI(1773.39, -4278.97, 7, 6, 0, "Shadowswift Brotherhood");
++            player->SEND_POI(1773.39, -4278.97, 7, 6, 0, "Bruderschaft der Schattenläufer");
+             player->SEND_GOSSIP_MENU(2563,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //Warlock
+-            player->SEND_POI(1849.57, -4359.68, 7, 6, 0, "Darkfire Enclave");
++            player->SEND_POI(1849.57, -4359.68, 7, 6, 0, "Dunkelfeuerenklave");
+             player->SEND_GOSSIP_MENU(2564,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Warrior
+-            player->SEND_POI(1983.92, -4794.2, 7, 6, 0, "Hall of the Brave");
++            player->SEND_POI(1983.92, -4794.2, 7, 6, 0, "Halle der Kriegerhelden");
+             player->SEND_GOSSIP_MENU(2565,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Paladin
+-            player->SEND_POI(1906.65, -4134.26, 7, 6, 0, "Valley of Wisdom");
++            player->SEND_POI(1906.65, -4134.26, 7, 6, 0, "Tal der Weisheit");
+             player->SEND_GOSSIP_MENU(10843,_Creature->GetGUID());
+             break;
+     }
+@@ -2159,51 +2159,51 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Alchemy
+-            player->SEND_POI(1955.17, -4475.79, 7, 6, 0, "Yelmak's Alchemy and Potions");
++            player->SEND_POI(1955.17, -4475.79, 7, 6, 0, "Yelmaks Alchimie und Getränke");
+             player->SEND_GOSSIP_MENU(2497,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Blacksmithing
+-            player->SEND_POI(2054.34, -4831.85, 7, 6, 0, "The Burning Anvil");
++            player->SEND_POI(2054.34, -4831.85, 7, 6, 0, "Der brennende Amboss");
+             player->SEND_GOSSIP_MENU(2499,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Cooking
+-            player->SEND_POI(1780.96, -4481.31, 7, 6, 0, "Borstan's Firepit");
++		player->SEND_POI(1780.96, -4481.31, 7, 6, 0, "Borstans Feuergrube");
+             player->SEND_GOSSIP_MENU(2500,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Enchanting
+-            player->SEND_POI(1917.5, -4434.95, 7, 6, 0, "Godan's Runeworks");
++            player->SEND_POI(1917.5, -4434.95, 7, 6, 0, "Godans Runenarbeiten");
+             player->SEND_GOSSIP_MENU(2501,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Engineering
+-            player->SEND_POI(2038.45, -4744.75, 7, 6, 0, "Nogg's Machine Shop");
++            player->SEND_POI(2038.45, -4744.75, 7, 6, 0, "Noggs Meistermaschinen");
+             player->SEND_GOSSIP_MENU(2653,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //First Aid
+-            player->SEND_POI(1485.21, -4160.91, 7, 6, 0, "Survival of the Fittest");
++            player->SEND_POI(1485.21, -4160.91, 7, 6, 0, "Der Stärkste überlebt");
+             player->SEND_GOSSIP_MENU(2502,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Fishing
+-            player->SEND_POI(1994.15, -4655.7, 7, 6, 0, "Lumak's Fishing");
++            player->SEND_POI(1994.15, -4655.7, 7, 6, 0, "Lumaks Angeln");
+             player->SEND_GOSSIP_MENU(2503,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Herbalism
+-            player->SEND_POI(1898.61, -4454.93, 7, 6, 0, "Jandi's Arboretum");
++            player->SEND_POI(1898.61, -4454.93, 7, 6, 0, "Jandis Arboretum");
+             player->SEND_GOSSIP_MENU(2504,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 9:                    //Leatherworking
+-            player->SEND_POI(1852.82, -4562.31, 7, 6, 0, "Kodohide Leatherworkers");
++            player->SEND_POI(1852.82, -4562.31, 7, 6, 0, "Kodolederer");
+             player->SEND_GOSSIP_MENU(2513,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 10:                   //Mining
+-            player->SEND_POI(2029.79, -4704, 7, 6, 0, "Red Canyon Mining");
++            player->SEND_POI(2029.79, -4704, 7, 6, 0, "Bergbauunternehmen Rotschlucht");
+             player->SEND_GOSSIP_MENU(2515,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 11:                   //Skinning
+-            player->SEND_POI(1852.82, -4562.31, 7, 6, 0, "Kodohide Leatherworkers");
++            player->SEND_POI(1852.82, -4562.31, 7, 6, 0, "Kodolederer");
+             player->SEND_GOSSIP_MENU(2516,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 12:                   //Tailoring
+-            player->SEND_POI(1802.66, -4560.66, 7, 6, 0, "Magar's Cloth Goods");
++            player->SEND_POI(1802.66, -4560.66, 7, 6, 0, "Magars Tuchwaren");
+             player->SEND_GOSSIP_MENU(2518,_Creature->GetGUID());
+             break;
+     }
+@@ -2264,7 +2264,7 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Tavern
+-            player->SEND_POI(-1759.5, 5165, 7, 6, 0, "Worlds End Tavern");
++            player->SEND_POI(-1759.5, 5165, 7, 6, 0, "Taverne Weltenend");
+             player->SEND_GOSSIP_MENU(10394, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Bank
+@@ -2278,7 +2278,7 @@
+             player->SEND_GOSSIP_MENU(10382, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Flight master
+-            player->SEND_POI(-1832, 5299, 7, 6, 0, "Flight Master");
++            player->SEND_POI(-1832, 5299, 7, 6, 0, "Flugmeister von Shattrath");
+             player->SEND_GOSSIP_MENU(10385, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Mailbox
+@@ -2311,11 +2311,11 @@
+             player->SEND_GOSSIP_MENU(10391, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 9:                    //Mana Loom
+-            player->SEND_POI(-2070, 5265.5, 7, 6, 0, "Mana Loom");
++            player->SEND_POI(-2070, 5265.5, 7, 6, 0, "Manawebrahmen");
+             player->SEND_GOSSIP_MENU(10503, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 10:                   //Alchemy Lab
+-            player->SEND_POI(-1648.5, 5540, 7, 6, 0, "Alchemy Lab");
++            player->SEND_POI(-1648.5, 5540, 7, 6, 0, "Alchemielabor");
+             player->SEND_GOSSIP_MENU(10321, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 11:                   //Gem Merchant
+@@ -2330,12 +2330,12 @@
+ {
+     if (action == GOSSIP_ACTION_INFO_DEF + 1)
+     {
+-        player->SEND_POI(-1730.5, 5496, 7, 6, 0, "Aldor Bank");
++        player->SEND_POI(-1730.5, 5496, 7, 6, 0, "Bank der Aldor");
+         player->SEND_GOSSIP_MENU(10380,  _Creature->GetGUID());
+     }
+     if (action == GOSSIP_ACTION_INFO_DEF + 2)
+     {
+-        player->SEND_POI(-1997.7, 5363, 7, 6, 0, "Scyers Bank");
++        player->SEND_POI(-1997.7, 5363, 7, 6, 0, "Bank der Seher");
+         player->SEND_GOSSIP_MENU(10381, _Creature->GetGUID());
+     }
+ }
+@@ -2344,12 +2344,12 @@
+ {
+     if (action == GOSSIP_ACTION_INFO_DEF + 1)
+     {
+-        player->SEND_POI(-1895, 5767, 7, 6, 0, "Aldor Inn");
++        player->SEND_POI(-1895, 5767, 7, 6, 0, "Gasthaus der Aldor");
+         player->SEND_GOSSIP_MENU(10383,  _Creature->GetGUID());
+     }
+     if (action == GOSSIP_ACTION_INFO_DEF + 2)
+     {
+-        player->SEND_POI(-2178, 5405, 7, 6, 0, "Scyers Inn");
++        player->SEND_POI(-2178, 5405, 7, 6, 0, "Gasthaus der Seher");
+         player->SEND_GOSSIP_MENU(10384, _Creature->GetGUID());
+     }
+ }
+@@ -2359,19 +2359,19 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:
+-            player->SEND_POI(-1730.5, 5496, 7, 6, 0, "Aldor Bank");
++            player->SEND_POI(-1730.5, 5496, 7, 6, 0, "Bank der Aldor");
+             player->SEND_GOSSIP_MENU(10380,  _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:
+-            player->SEND_POI(-1895, 5767, 7, 6, 0, "Aldor Inn");
++            player->SEND_POI(-1895, 5767, 7, 6, 0, "Gasthaus der Aldor");
+             player->SEND_GOSSIP_MENU(10383,  _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:
+-            player->SEND_POI(-1997.7, 5363, 7, 6, 0, "Scyers Bank");
++            player->SEND_POI(-1997.7, 5363, 7, 6, 0, "Bank der Seher");
+             player->SEND_GOSSIP_MENU(10381, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:
+-            player->SEND_POI(-2178, 5405, 7, 6, 0, "Scyers Inn");
++            player->SEND_POI(-2178, 5405, 7, 6, 0, "Gasthaus der Seher");
+             player->SEND_GOSSIP_MENU(10384, _Creature->GetGUID());
+             break;
+     }
+@@ -2381,12 +2381,12 @@
+ {
+     if (action == GOSSIP_ACTION_INFO_DEF + 1)
+     {
+-        player->SEND_POI(-1888.5, 5761, 7, 6, 0, "Aldor Stable");
++        player->SEND_POI(-1888.5, 5761, 7, 6, 0, "Stall der Aldor");
+         player->SEND_GOSSIP_MENU(10321,  _Creature->GetGUID());
+     }
+     if (action == GOSSIP_ACTION_INFO_DEF + 2)
+     {
+-        player->SEND_POI(-2170, 5404, 7, 6, 0, "Scyers Stable");
++        player->SEND_POI(-2170, 5404, 7, 6, 0, "Stall der Seher");
+         player->SEND_GOSSIP_MENU(10321, _Creature->GetGUID());
+     }
+ }
+@@ -2396,15 +2396,15 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:
+-            player->SEND_POI(-1774, 5251, 7, 6, 0, "Alliance Battlemasters");
++            player->SEND_POI(-1774, 5251, 7, 6, 0, "Kampfmeister der Allianz");
+             player->SEND_GOSSIP_MENU(10389, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:
+-            player->SEND_POI(-1963, 5263, 7, 6, 0, "Horde Battlemasters");
++            player->SEND_POI(-1963, 5263, 7, 6, 0, "Kapfmeister der Horde");
+             player->SEND_GOSSIP_MENU(10390,  _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:
+-            player->SEND_POI(-1960, 5175, 7, 6, 0, "Arena Battlemasters");
++            player->SEND_POI(-1960, 5175, 7, 6, 0, "Arena Kampfmeister");
+             player->SEND_GOSSIP_MENU(12510,  _Creature->GetGUID());
+             break;
+     }
+@@ -2915,7 +2915,7 @@
+             player->SEND_GOSSIP_MENU(9317, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Bank
+-            player->SEND_POI(9808.4, -7488.16, 7, 6, 0, "Silvermoon Bank");
++            player->SEND_POI(9808.4, -7488.16, 7, 6, 0, "Bank von Silbermond");
+             player->SEND_GOSSIP_MENU(9322, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Guild master
+@@ -2928,7 +2928,7 @@
+             player->SEND_GOSSIP_MENU(9602, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Mailbox
+-            player->SEND_POI(9658.33, -7492.17, 7, 6, 0, "Silvermoon Mailbox");
++            player->SEND_POI(9658.33, -7492.17, 7, 6, 0, "Briefkasten von Silbermond");
+             player->SEND_GOSSIP_MENU(9326, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //Stable master
+@@ -2940,7 +2940,7 @@
+             player->SEND_GOSSIP_MENU(9328, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Wind master
+-            player->SEND_POI(9378.45, -7163.94, 7, 6, 0, "Silvermoon Wind Master");
++            player->SEND_POI(9378.45, -7163.94, 7, 6, 0, "Flugmeister von Silbermond");
+             player->SEND_GOSSIP_MENU(10181, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 9:                    //Battlemaster
+@@ -2998,7 +2998,7 @@
+ {
+     if (action == GOSSIP_ACTION_INFO_DEF + 1)
+     {
+-        player->SEND_POI(9677.7, -7368, 7, 6, 0, "Silvermoon City Inn");
++        player->SEND_POI(9677.7, -7368, 7, 6, 0, "Gasthaus von Silbermond");
+         player->SEND_GOSSIP_MENU(9325, _Creature->GetGUID());
+     }
+     if (action == GOSSIP_ACTION_INFO_DEF + 2)
+@@ -3017,7 +3017,7 @@
+             player->SEND_GOSSIP_MENU(9329, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //AB
+-            player->SEND_POI(9857.18, -7564.36, 7, 6, 0, "Karen Wentworth");
++            player->SEND_POI(9857.18, -7564.36, 7, 6, 0, "Karen Ehrenpfand");
+             player->SEND_GOSSIP_MENU(9329,  _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //A
+@@ -3025,7 +3025,7 @@
+             player->SEND_GOSSIP_MENU(9329, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //EOS
+-            player->SEND_POI(9857.18, -7564.36, 7, 6, 0, "Karen Wentworth");
++            player->SEND_POI(9857.18, -7564.36, 7, 6, 0, "Karen Ehrenpfand");
+             player->SEND_GOSSIP_MENU(9329, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //WSG
+@@ -3040,7 +3040,7 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Druid
+-            player->SEND_POI(9700.55, -7262.57, 7, 6, 0, "Harene Plainwalker");
++            player->SEND_POI(9700.55, -7262.57, 7, 6, 0, "Harene Ebenlauf");
+             player->SEND_GOSSIP_MENU(9330, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Hunter
+@@ -3075,55 +3075,55 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Alchemy
+-            player->SEND_POI(9998.09, -7214.36, 7, 6, 0, "Silvermoon Alchemy Trainer");
++            player->SEND_POI(9998.09, -7214.36, 7, 6, 0, "Alchemielehrer von Silbermond");
+             player->SEND_GOSSIP_MENU(9316, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Blacksmithing
+-            player->SEND_POI(9841.43, -7361.53, 7, 6, 0, "Silvermoon Blacksmithing Trainer");
++            player->SEND_POI(9841.43, -7361.53, 7, 6, 0, "Schmiedekunst von Silbermond");
+             player->SEND_GOSSIP_MENU(9340, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Cooking
+-            player->SEND_POI(9577.26, -7243.6, 7, 6, 0, "Silvermoon Cooking Trainer");
++            player->SEND_POI(9577.26, -7243.6, 7, 6, 0, "Kochen in Silbermond");
+             player->SEND_GOSSIP_MENU(9316, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Enchanting
+-            player->SEND_POI(9962.57, -7246.18, 7, 6, 0, "Silvermoon Enchanting Trainer");
++            player->SEND_POI(9962.57, -7246.18, 7, 6, 0, "Verzauberkunst von Silbermond");
+             player->SEND_GOSSIP_MENU(9341, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Engineering
+-            player->SEND_POI(9820.18, -7329.56, 7, 6, 0, "Silvermoon Engineering Trainer");
++            player->SEND_POI(9820.18, -7329.56, 7, 6, 0, "Ingenieurskunst von Silbermond");
+             player->SEND_GOSSIP_MENU(9316, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //First Aid
+-            player->SEND_POI(9579.8, -7343.71, 7, 6, 0, "Silvermoon First Aid Trainer");
++            player->SEND_POI(9579.8, -7343.71, 7, 6, 0, "Erste Hilfe von Silbermond");
+             player->SEND_GOSSIP_MENU(9316, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Fishing
+-            player->SEND_POI(9602.73, -7328.3, 7, 6, 0, "Silvermoon Fishing Trainer");
++            player->SEND_POI(9602.73, -7328.3, 7, 6, 0, "Angellehrer von Silbermond");
+             player->SEND_GOSSIP_MENU(9316, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Jewelcrafting
+-            player->SEND_POI(9553.54, -7506.43, 7, 6, 0, "Silvermoon Jewelcrafting Trainer");
++            player->SEND_POI(9553.54, -7506.43, 7, 6, 0, "Juwelenschleifenlehrer von Silbermond");
+             player->SEND_GOSSIP_MENU(9346, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 9:                    //Herbalism
+-            player->SEND_POI(10004.4, -7216.86, 7, 6, 0, "Silvermoon Herbalism Trainer");
++            player->SEND_POI(10004.4, -7216.86, 7, 6, 0, "Kräuterkunde von Silbermond");
+             player->SEND_GOSSIP_MENU(9316, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 10:                   //Leatherworking
+-            player->SEND_POI(9503.72, -7430.16, 7, 6, 0, "Silvermoon Leatherworking Trainer");
++            player->SEND_POI(9503.72, -7430.16, 7, 6, 0, "Lederverarbeitung von Silbermond");
+             player->SEND_GOSSIP_MENU(9347, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 11:                   //Mining
+-            player->SEND_POI(9805.1, -7355.56, 7, 6, 0, "Silvermoon Mining Trainer");
++            player->SEND_POI(9805.1, -7355.56, 7, 6, 0, "Bergbau von Silbermond");
+             player->SEND_GOSSIP_MENU(9348, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 12:                   //Skinning
+-            player->SEND_POI(9513.37, -7429.4, 7, 6, 0, "Silvermoon Skinning Trainer");
++            player->SEND_POI(9513.37, -7429.4, 7, 6, 0, "Kürschnerei von Silbermond");
+             player->SEND_GOSSIP_MENU(9316, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 13:                   //Tailoring
+-            player->SEND_POI(9750.55, -7095.28, 7, 6, 0, "Silvermoon Tailor");
++		player->SEND_POI(9750.55, -7095.28, 7, 6, 0, "Schneiderei von Silbermond");
+             player->SEND_GOSSIP_MENU(9350, _Creature->GetGUID());
+             break;
+     }
+@@ -3180,35 +3180,35 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Auction House
+-            player->SEND_POI(-8811.46, 667.46, 7, 6, 0, "Stormwind Auction House");
++            player->SEND_POI(-8811.46, 667.46, 7, 6, 0, "Auktionshaus von Sturmwind");
+             player->SEND_GOSSIP_MENU(3834,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Bank
+-            player->SEND_POI(-8916.87, 622.87, 7, 6, 0, "Stormwind Bank");
++            player->SEND_POI(-8916.87, 622.87, 7, 6, 0, "Bank von Sturmwind");
+             player->SEND_GOSSIP_MENU(764,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Deeprun tram
+-            player->SEND_POI(-8378.88, 554.23, 7, 6, 0, "The Deeprun Tram");
++            player->SEND_POI(-8378.88, 554.23, 7, 6, 0, "Die Tiefenbahn");
+             player->SEND_GOSSIP_MENU(3813,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Inn
+-            player->SEND_POI(-8869.0, 675.4, 7, 6, 0, "The Gilded Rose");
++            player->SEND_POI(-8869.0, 675.4, 7, 6, 0, "Die Güldene Rose");
+             player->SEND_GOSSIP_MENU(3860,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Gryphon Master
+-            player->SEND_POI(-8837.0, 493.5, 7, 6, 0, "Stormwind Gryphon Master");
++            player->SEND_POI(-8837.0, 493.5, 7, 6, 0, "Greifenmeister von Sturmwind");
+             player->SEND_GOSSIP_MENU(879,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //Guild Master
+-            player->SEND_POI(-8894.0, 611.2, 7, 6, 0, "Stormwind Vistor`s Center");
++            player->SEND_POI(-8894.0, 611.2, 7, 6, 0, "Besucherzentrum von Sturmwind");
+             player->SEND_GOSSIP_MENU(882,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Mailbox
+-            player->SEND_POI(-8876.48, 649.18, 7, 6, 0, "Stormwind Mailbox");
++            player->SEND_POI(-8876.48, 649.18, 7, 6, 0, "Briefkasten von Sturmwind");
+             player->SEND_GOSSIP_MENU(3861,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Stable Master
+-            player->SEND_POI(-8433.0, 554.7, 7, 6, 0, "Jenova Stoneshield");
++            player->SEND_POI(-8433.0, 554.7, 7, 6, 0, "Jenova Steinschild");
+             player->SEND_GOSSIP_MENU(5984,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 9:                    //Weapon Trainer
+@@ -3216,7 +3216,7 @@
+             player->SEND_GOSSIP_MENU(4516,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 10:                   //Officers Lounge
+-            player->SEND_POI(-8759.92, 399.69, 7, 6, 0, "Champions` Hall");
++            player->SEND_POI(-8759.92, 399.69, 7, 6, 0, "Die Halle der Champions");
+             player->SEND_GOSSIP_MENU(7047,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 11:                   //Battlemasters
+@@ -3260,7 +3260,7 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //AV
+-            player->SEND_POI(-8443.88, 335.99, 7, 6, 0, "Thelman Slatefist");
++            player->SEND_POI(-8443.88, 335.99, 7, 6, 0, "Thelman Fausttadel");
+             player->SEND_GOSSIP_MENU(7500, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //AB
+@@ -3279,39 +3279,39 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Mage
+-            player->SEND_POI(-9012.0, 867.6, 7, 6, 0, "Wizard`s Sanctum");
++            player->SEND_POI(-9012.0, 867.6, 7, 6, 0, "Magiersanktum");
+             player->SEND_GOSSIP_MENU(899,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Rogue
+-            player->SEND_POI(-8753.0, 367.8, 7, 6, 0, "Stormwind - Rogue House");
++            player->SEND_POI(-8753.0, 367.8, 7, 6, 0, "Schurkenhaus von Sturmwind");
+             player->SEND_GOSSIP_MENU(900,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Warrior
+-            player->SEND_POI(-8624.54, 402.61, 7, 6, 0, "Pig and Whistle Tavern");
++            player->SEND_POI(-8624.54, 402.61, 7, 6, 0, "Gasthaus zum pfeifenden Schwein");
+             player->SEND_GOSSIP_MENU(901,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Druid
+-            player->SEND_POI(-8751.0, 1124.5, 7, 6, 0, "The Park");
++            player->SEND_POI(-8751.0, 1124.5, 7, 6, 0, "Der Park");
+             player->SEND_GOSSIP_MENU(902,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Priest
+-            player->SEND_POI(-8512.0, 862.4, 7, 6, 0, "Catedral Of Light");
++            player->SEND_POI(-8512.0, 862.4, 7, 6, 0, "Kathedrale des Lichts");
+             player->SEND_GOSSIP_MENU(903,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //Paladin
+-            player->SEND_POI(-8577.0, 881.7, 7, 6, 0, "Catedral Of Light");
++            player->SEND_POI(-8577.0, 881.7, 7, 6, 0, "Kathedrale des Lichts");
+             player->SEND_GOSSIP_MENU(904,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Hunter
+-            player->SEND_POI(-8413.0, 541.5, 7, 6, 0, "Hunter Lodge");
++            player->SEND_POI(-8413.0, 541.5, 7, 6, 0, "Jägerlodge");
+             player->SEND_GOSSIP_MENU(905,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Warlock
+-            player->SEND_POI(-8948.91, 998.35, 7, 6, 0, "The Slaughtered Lamb");
++            player->SEND_POI(-8948.91, 998.35, 7, 6, 0, "Zum geschlachtetem Lamm");
+             player->SEND_GOSSIP_MENU(906,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 9:                    //Shaman
+-            player->SEND_POI(-9033, 550, 7, 6, 0, "Valley Of Heroes");
++            player->SEND_POI(-9033, 550, 7, 6, 0, "Tal der Helden");
+                                                             //incorrect id
+             player->SEND_GOSSIP_MENU(2593,_Creature->GetGUID());
+             break;
+@@ -3323,15 +3323,15 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Alchemy
+-            player->SEND_POI(-8988.0, 759.60, 7, 6, 0, "Alchemy Needs");
++            player->SEND_POI(-8988.0, 759.60, 7, 6, 0, "Alchimiebedarf");
+             player->SEND_GOSSIP_MENU(919,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Blacksmithing
+-            player->SEND_POI(-8424.0, 616.9, 7, 6, 0, "Therum Deepforge");
++            player->SEND_POI(-8424.0, 616.9, 7, 6, 0, "Therum Tiefenschmied");
+             player->SEND_GOSSIP_MENU(920,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Cooking
+-            player->SEND_POI(-8611.0, 364.6, 7, 6, 0, "Pig and Whistle Tavern");
++            player->SEND_POI(-8611.0, 364.6, 7, 6, 0, "Taverne zum pfeifenden Schwein");
+             player->SEND_GOSSIP_MENU(921,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Enchanting
+@@ -3339,7 +3339,7 @@
+             player->SEND_GOSSIP_MENU(941,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Engineering
+-            player->SEND_POI(-8347.0, 644.1, 7, 6, 0, "Lilliam Sparkspindle");
++            player->SEND_POI(-8347.0, 644.1, 7, 6, 0, "Lilliam Spindelfunks");
+             player->SEND_GOSSIP_MENU(922,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //First Aid
+@@ -3351,23 +3351,23 @@
+             player->SEND_GOSSIP_MENU(940,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Herbalism
+-            player->SEND_POI(-8967.0, 779.5, 7, 6, 0, "Alchemy Needs");
++            player->SEND_POI(-8967.0, 779.5, 7, 6, 0, "Alchimiebedarf");
+             player->SEND_GOSSIP_MENU(924,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 9:                    //Leatherworking
+-            player->SEND_POI(-8726.0, 477.4, 7, 6, 0, "The Protective Hide");
++            player->SEND_POI(-8726.0, 477.4, 7, 6, 0, "Der schützende Balg");
+             player->SEND_GOSSIP_MENU(925,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 10:                   //Mining
+-            player->SEND_POI(-8434.0, 692.8, 7, 6, 0, "Gelman Stonehand");
++            player->SEND_POI(-8434.0, 692.8, 7, 6, 0, "Gelman Steinhand");
+             player->SEND_GOSSIP_MENU(927,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 11:                   //Skinning
+-            player->SEND_POI(-8716.0, 469.4, 7, 6, 0, "The Protective Hide");
++            player->SEND_POI(-8716.0, 469.4, 7, 6, 0, "Der schützende Balg");
+             player->SEND_GOSSIP_MENU(928,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 12:                   //Tailoring
+-            player->SEND_POI(-8938.0, 800.7, 7, 6, 0, "Duncan`s Textiles");
++            player->SEND_POI(-8938.0, 800.7, 7, 6, 0, "Duncans Textilien");
+             player->SEND_GOSSIP_MENU(929,_Creature->GetGUID());
+             break;
+     }
+@@ -3432,7 +3432,7 @@
+             player->SEND_GOSSIP_MENU(4319,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Inn
+-            player->SEND_POI(9821.49, 960.13, 7, 6, 0, "Dolanaar Inn");
++            player->SEND_POI(9821.49, 960.13, 7, 6, 0, "Gasthaus von Dolanaar");
+             player->SEND_GOSSIP_MENU(4320,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //stable master
+@@ -3475,7 +3475,7 @@
+             player->SEND_GOSSIP_MENU(4324,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Priest
+-            player->SEND_POI(9906.16, 986.63, 7, 6, 0, "Laurna Morninglight");
++            player->SEND_POI(9906.16, 986.63, 7, 6, 0, "Laurna Morgenglanz");
+             player->SEND_GOSSIP_MENU(4325,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Rogue
+@@ -3483,7 +3483,7 @@
+             player->SEND_GOSSIP_MENU(4326,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Warrior
+-            player->SEND_POI(9821.96, 950.61, 7, 6, 0, "Kyra Windblade");
++            player->SEND_POI(9821.96, 950.61, 7, 6, 0, "Kyra Windklinge");
+             player->SEND_GOSSIP_MENU(4327,_Creature->GetGUID());
+             break;
+     }
+@@ -3502,7 +3502,7 @@
+             player->SEND_GOSSIP_MENU(4330,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Enchanting
+-            player->SEND_POI(10677.59, 1946.56, 7, 6, 0, "Alanna Raveneye");
++            player->SEND_POI(10677.59, 1946.56, 7, 6, 0, "Alanna Rabenauge");
+             player->SEND_GOSSIP_MENU(4331,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //First Aid
+@@ -3513,15 +3513,15 @@
+             player->SEND_GOSSIP_MENU(4333,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //Herbalism
+-            player->SEND_POI(9773.78, 875.88, 7, 6, 0, "Malorne Bladeleaf");
++            player->SEND_POI(9773.78, 875.88, 7, 6, 0, "Malorne Messerblatt");
+             player->SEND_GOSSIP_MENU(4334,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Leatherworking
+-            player->SEND_POI(10152.59, 1681.46, 7, 6, 0, "Nadyia Maneweaver");
++            player->SEND_POI(10152.59, 1681.46, 7, 6, 0, "Nadyia Schopfweber");
+             player->SEND_GOSSIP_MENU(4335,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Skinning
+-            player->SEND_POI(10135.59, 1673.18, 7, 6, 0, "Radnaal Maneweaver");
++            player->SEND_POI(10135.59, 1673.18, 7, 6, 0, "Radnaal Schopfweber");
+             player->SEND_GOSSIP_MENU(4336,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 9:                    //Tailoring
+@@ -3577,7 +3577,7 @@
+             player->SEND_GOSSIP_MENU(4075,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Inn
+-            player->SEND_POI(2246.68, 241.89, 7, 6, 0, "Gallows` End Tavern");
++            player->SEND_POI(2246.68, 241.89, 7, 6, 0, "Taverne zur Galgenschlinge");
+             player->SEND_GOSSIP_MENU(4076,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Stable Master
+@@ -3615,15 +3615,15 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Mage
+-            player->SEND_POI(2259.18, 240.93, 7, 6, 0, "Cain Firesong");
++            player->SEND_POI(2259.18, 240.93, 7, 6, 0, "Cain Feuerlied");
+             player->SEND_GOSSIP_MENU(4077,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Priest
+-            player->SEND_POI(2259.18, 240.93, 7, 6, 0, "Dark Cleric Beryl");
++            player->SEND_POI(2259.18, 240.93, 7, 6, 0, "Dunkler Kleriker Beryll");
+             player->SEND_GOSSIP_MENU(4078,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Rogue
+-            player->SEND_POI(2259.18, 240.93, 7, 6, 0, "Marion Call");
++            player->SEND_POI(2259.18, 240.93, 7, 6, 0, "Marion Kall");
+             player->SEND_GOSSIP_MENU(4079,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Warlock
+@@ -3652,14 +3652,14 @@
+             player->SEND_GOSSIP_MENU(4084,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Enchanting
+-            player->SEND_POI(2250.35, 249.12, 7, 6, 0, "Vance Undergloom");
++            player->SEND_POI(2250.35, 249.12, 7, 6, 0, "Vance Niederglimm");
+             player->SEND_GOSSIP_MENU(4085,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Engineering
+             player->SEND_GOSSIP_MENU(4086,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //First Aid
+-            player->SEND_POI(2246.68, 241.89, 7, 6, 0, "Nurse Neela");
++            player->SEND_POI(2246.68, 241.89, 7, 6, 0, "Schwester Neela");
+             player->SEND_GOSSIP_MENU(4087,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Fishing
+@@ -3735,31 +3735,31 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Bank
+-            player->SEND_POI(1595.64, 232.45, 7, 6, 0, "Undercity Bank");
++            player->SEND_POI(1595.64, 232.45, 7, 6, 0, "Bank von Unterstadt");
+             player->SEND_GOSSIP_MENU(3514,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Bat handler
+-            player->SEND_POI(1565.9, 271.43, 7, 6, 0, "Undercity Bat Handler");
++            player->SEND_POI(1565.9, 271.43, 7, 6, 0, "Fledermausführer von Unterstadt");
+             player->SEND_GOSSIP_MENU(3515,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Guild master
+-            player->SEND_POI(1594.17, 205.57, 7, 6, 0, "Undercity Guild Master");
++            player->SEND_POI(1594.17, 205.57, 7, 6, 0, "Gildenmeister von Unterstadt");
+             player->SEND_GOSSIP_MENU(3516,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Inn
+-            player->SEND_POI(1639.43, 220.99, 7, 6, 0, "Undercity Inn");
++            player->SEND_POI(1639.43, 220.99, 7, 6, 0, "Gasthaus von Unterstadt");
+             player->SEND_GOSSIP_MENU(3517,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Mailbox
+-            player->SEND_POI(1632.68, 219.4, 7, 6, 0, "Undercity Mailbox");
++            player->SEND_POI(1632.68, 219.4, 7, 6, 0, "Briefkasten von Unterstadt");
+             player->SEND_GOSSIP_MENU(3518,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //Auction House
+-            player->SEND_POI(1647.9, 258.49, 7, 6, 0, "Undercity Auction House");
++            player->SEND_POI(1647.9, 258.49, 7, 6, 0, "Auktionshaus von Unterstadt");
+             player->SEND_GOSSIP_MENU(3519,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Zeppelin
+-            player->SEND_POI(2059, 274.86, 7, 6, 0, "Undercity Zeppelin");
++            player->SEND_POI(2059, 274.86, 7, 6, 0, "Zeppelin von Unterstadt");
+             player->SEND_GOSSIP_MENU(3520,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Weapon Master
+@@ -3807,15 +3807,15 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //AV
+-            player->SEND_POI(1329, 333.92, 7, 6, 0, "Grizzle Halfmane");
++            player->SEND_POI(1329, 333.92, 7, 6, 0, "Grizzle Halbskalb");
+             player->SEND_GOSSIP_MENU(7525,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //AB
+-            player->SEND_POI(1283.3, 287.16, 7, 6, 0, "Sir Malory Wheeler");
++            player->SEND_POI(1283.3, 287.16, 7, 6, 0, "Sir Malory Wagner");
+             player->SEND_GOSSIP_MENU(7646,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //WSG
+-            player->SEND_POI(1265, 351.18, 7, 6, 0, "Kurden Bloodclaw");
++            player->SEND_POI(1265, 351.18, 7, 6, 0, "Kurden Blutklaue");
+             player->SEND_GOSSIP_MENU(7526,_Creature->GetGUID());
+             break;
+     }
+@@ -3826,15 +3826,15 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Mage
+-            player->SEND_POI(1781, 53, 7, 6, 0, "Undercity Mage Trainers");
++            player->SEND_POI(1781, 53, 7, 6, 0, "Magielehrer von Unterstadt");
+             player->SEND_GOSSIP_MENU(3513,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Priest
+-            player->SEND_POI(1758.33, 401.5, 7, 6, 0, "Undercity Priest Trainers");
++            player->SEND_POI(1758.33, 401.5, 7, 6, 0, "Priesterlehrer von Unterstadt");
+             player->SEND_GOSSIP_MENU(3521,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Rogue
+-            player->SEND_POI(1418.56, 65, 7, 6, 0, "Undercity Rogue Trainers");
++            player->SEND_POI(1418.56, 65, 7, 6, 0, "Schurkenlehrer von Unterstadt");
+             player->SEND_GOSSIP_MENU(3524,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Warlock
+@@ -3842,7 +3842,7 @@
+             player->SEND_GOSSIP_MENU(3526,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Warrior
+-            player->SEND_POI(1775.59, 418.19, 7, 6, 0, "Undercity Warrior Trainers");
++            player->SEND_POI(1775.59, 418.19, 7, 6, 0, "Kriegerlehrer von Unterstadt");
+             player->SEND_GOSSIP_MENU(3527,_Creature->GetGUID());
+             break;
+     }
+@@ -3853,11 +3853,11 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF + 1:                    //Alchemy
+-            player->SEND_POI(1419.82, 417.19, 7, 6, 0, "The Apothecarium");
++            player->SEND_POI(1419.82, 417.19, 7, 6, 0, "Alchimielehrer von Unterstadt");
+             player->SEND_GOSSIP_MENU(3528,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 2:                    //Blacksmithing
+-            player->SEND_POI(1696, 285, 7, 6, 0, "Undercity Blacksmithing Trainer");
++            player->SEND_POI(1696, 285, 7, 6, 0, "Schmiedekunstlehrer von Unterstadt");
+             player->SEND_GOSSIP_MENU(3529,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 3:                    //Cooking
+@@ -3865,39 +3865,39 @@
+             player->SEND_GOSSIP_MENU(3530,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 4:                    //Enchanting
+-            player->SEND_POI(1488.54, 280.19, 7, 6, 0, "Undercity Enchanting Trainer");
++            player->SEND_POI(1488.54, 280.19, 7, 6, 0, "Verzauberkunstlehrer von Unterstadt");
+             player->SEND_GOSSIP_MENU(3531,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 5:                    //Engineering
+-            player->SEND_POI(1408.58, 143.43, 7, 6, 0, "Undercity Engineering Trainer");
++            player->SEND_POI(1408.58, 143.43, 7, 6, 0, "Ingenieurskunstlehrer von Unterstadt");
+             player->SEND_GOSSIP_MENU(3532,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 6:                    //First Aid
+-            player->SEND_POI(1519.65, 167.19, 7, 6, 0, "Undercity First Aid Trainer");
++            player->SEND_POI(1519.65, 167.19, 7, 6, 0, "Lehrer für Erste Hilfe von Unterstadt");
+             player->SEND_GOSSIP_MENU(3533,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 7:                    //Fishing
+-            player->SEND_POI(1679.9, 89, 7, 6, 0, "Undercity Fishing Trainer");
++            player->SEND_POI(1679.9, 89, 7, 6, 0, "Angellehrer von Unterstadt");
+             player->SEND_GOSSIP_MENU(3534,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 8:                    //Herbalism
+-            player->SEND_POI(1558, 349.36, 7, 6, 0, "Undercity Herbalism Trainer");
++            player->SEND_POI(1558, 349.36, 7, 6, 0, "Kräuterkundelehrer von Unterstadt");
+             player->SEND_GOSSIP_MENU(3535,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 9:                    //Leatherworking
+-            player->SEND_POI(1498.76, 196.43, 7, 6, 0, "Undercity Leatherworking Trainer");
++            player->SEND_POI(1498.76, 196.43, 7, 6, 0, "Lederverarbeitungslehrer von Unterstadt");
+             player->SEND_GOSSIP_MENU(3536,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 10:                   //Mining
+-            player->SEND_POI(1642.88, 335.58, 7, 6, 0, "Undercity Mining Trainer");
++            player->SEND_POI(1642.88, 335.58, 7, 6, 0, "Bergbaulehrer von Unterstadt");
+             player->SEND_GOSSIP_MENU(3537,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 11:                   //Skinning
+-            player->SEND_POI(1498.6, 196.46, 7, 6, 0, "Undercity Skinning Trainer");
++            player->SEND_POI(1498.6, 196.46, 7, 6, 0, "Kürschnereilehrer von Unterstadt");
+             player->SEND_GOSSIP_MENU(3538,_Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF + 12:                   //Tailoring
+-            player->SEND_POI(1689.55, 193, 7, 6, 0, "Undercity Tailoring Trainer");
++            player->SEND_POI(1689.55, 193, 7, 6, 0, "Schneiderlehrer von Unterstadt");
+             player->SEND_GOSSIP_MENU(3539,_Creature->GetGUID());
+             break;
+     }
+Index: scripts/npc/npc_innkeeper.cpp
+===================================================================
+--- scripts/npc/npc_innkeeper.cpp	(Revision 913)
++++ scripts/npc/npc_innkeeper.cpp	(Arbeitskopie)
+@@ -29,8 +29,8 @@
+ 
+ #define LOCALE_TRICK_OR_TREAT_0 "Trick or Treat!"
+ #define LOCALE_TRICK_OR_TREAT_2 "Des bonbons ou des blagues!"
+-#define LOCALE_TRICK_OR_TREAT_3 "S��es oder Saures!"
+-#define LOCALE_TRICK_OR_TREAT_6 "�Truco o trato!"
++#define LOCALE_TRICK_OR_TREAT_3 "Süßes oder Saures!"
++#define LOCALE_TRICK_OR_TREAT_6 "¡Truco o trato!"
+ 
+ bool isEventActive()
+ {
+Index: scripts/zone/azshara/azshara.cpp
+===================================================================
+--- scripts/zone/azshara/azshara.cpp	(Revision 913)
++++ scripts/zone/azshara/azshara.cpp	(Arbeitskopie)
+@@ -100,10 +100,10 @@
+         player->PrepareQuestMenu( _Creature->GetGUID() );
+ 
+     if (player->GetQuestStatus(2744) == QUEST_STATUS_INCOMPLETE)
+-        player->ADD_GOSSIP_ITEM( 0, "Can you help me?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
++        player->ADD_GOSSIP_ITEM( 0, "Könnt ihr mir helfen?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
+ 
+     if (player->GetQuestStatus(3141) == QUEST_STATUS_INCOMPLETE)
+-        player->ADD_GOSSIP_ITEM( 0, "Tell me your story", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2);
++        player->ADD_GOSSIP_ITEM( 0, "Erzählt mir eure Geschichte", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2);
+ 
+     player->SEND_GOSSIP_MENU(_Creature->GetNpcTextId(), _Creature->GetGUID());
+ 
+@@ -120,23 +120,23 @@
+             break;
+ 
+         case GOSSIP_ACTION_INFO_DEF+2:
+-            player->ADD_GOSSIP_ITEM( 0, "Please continue", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 21);
++            player->ADD_GOSSIP_ITEM( 0, "Bitte setzt fort", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 21);
+             player->SEND_GOSSIP_MENU(1813, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+21:
+-            player->ADD_GOSSIP_ITEM( 0, "I do not understand", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 22);
++            player->ADD_GOSSIP_ITEM( 0, "Ich verstehe nicht", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 22);
+             player->SEND_GOSSIP_MENU(1814, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+22:
+-            player->ADD_GOSSIP_ITEM( 0, "Indeed", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 23);
++            player->ADD_GOSSIP_ITEM( 0, "In der Tat", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 23);
+             player->SEND_GOSSIP_MENU(1815, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+23:
+-            player->ADD_GOSSIP_ITEM( 0, "I will do this with or your help, Loramus", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 24);
++            player->ADD_GOSSIP_ITEM( 0, "Ich werde das mit deiner Hilfe tun $C", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 24);
+             player->SEND_GOSSIP_MENU(1816, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+24:
+-            player->ADD_GOSSIP_ITEM( 0, "Yes", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 25);
++            player->ADD_GOSSIP_ITEM( 0, "Ja", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 25);
+             player->SEND_GOSSIP_MENU(1817, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+25:
+Index: scripts/zone/blasted_lands/blasted_lands.cpp
+===================================================================
+--- scripts/zone/blasted_lands/blasted_lands.cpp	(Revision 913)
++++ scripts/zone/blasted_lands/blasted_lands.cpp	(Arbeitskopie)
+@@ -63,13 +63,13 @@
+ ## npc_fallen_hero_of_horde
+ ######*/
+ 
+-#define GOSSIP_ITEM_FALLEN "Continue..."
++#define GOSSIP_ITEM_FALLEN "Fahrt fort..."
+ 
+-#define GOSSIP_ITEM_FALLEN1 "What could be worse than death?"
+-#define GOSSIP_ITEM_FALLEN2 "Subordinates?"
+-#define GOSSIP_ITEM_FALLEN3 "What are the stones of binding?"
+-#define GOSSIP_ITEM_FALLEN4 "You can count on me, Hero"
+-#define GOSSIP_ITEM_FALLEN5 "I shall"
++#define GOSSIP_ITEM_FALLEN1 "Was kann schlimmer sein als der Tod?"
++#define GOSSIP_ITEM_FALLEN2 "Vorgesetzte?"
++#define GOSSIP_ITEM_FALLEN3 "Was sind die Steine der Bindung?"
++#define GOSSIP_ITEM_FALLEN4 "Ihr könnt auf mich zählen, Held."
++#define GOSSIP_ITEM_FALLEN5 "Ich sollte"
+ 
+ bool GossipHello_npc_fallen_hero_of_horde(Player *player, Creature *_Creature)
+ {
+@@ -77,13 +77,13 @@
+         player->PrepareQuestMenu( _Creature->GetGUID() );
+ 
+     if (player->GetQuestStatus(2784) == QUEST_STATUS_INCOMPLETE)
+-        player->ADD_GOSSIP_ITEM( 0, "Why are you here?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
++        player->ADD_GOSSIP_ITEM( 0, "Warum seid ihr hier?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
+ 
+     if (player->GetQuestStatus(2801) == QUEST_STATUS_INCOMPLETE && player->GetTeam() == HORDE)
+-        player->ADD_GOSSIP_ITEM( 0, "Continue story...", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2);
++        player->ADD_GOSSIP_ITEM( 0, "Fahrt mit der Geschichte fort...", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+2);
+ 
+     if (player->GetQuestStatus(2801) == QUEST_STATUS_INCOMPLETE && player->GetTeam() == ALLIANCE)
+-        player->ADD_GOSSIP_ITEM( 0, "Why are you here?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
++        player->ADD_GOSSIP_ITEM( 0, "Warum seid ihr hier?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
+ 
+     player->SEND_GOSSIP_MENU(_Creature->GetNpcTextId(), _Creature->GetGUID());
+ 
+Index: scripts/zone/dustwallow_marsh/dustwallow_marsh.cpp
+===================================================================
+--- scripts/zone/dustwallow_marsh/dustwallow_marsh.cpp	(Revision 913)
++++ scripts/zone/dustwallow_marsh/dustwallow_marsh.cpp	(Arbeitskopie)
+@@ -140,7 +140,7 @@
+ ## npc_lady_jaina_proudmoore
+ ######*/
+ 
+-#define GOSSIP_ITEM_JAINA "I know this is rather silly but i have a young ward who is a bit shy and would like your autograph."
++#define GOSSIP_ITEM_JAINA "Ich weiß dass das ein wenig töricht klingt aber ich habe einen kleinen Freund, welcher ein wenig schüchtern ist und gerne ein Autogramm von euch möchte."
+ 
+ bool GossipHello_npc_lady_jaina_proudmoore(Player *player, Creature *_Creature)
+ {
+Index: scripts/zone/eastern_plaguelands/eastern_plaguelands.cpp
+===================================================================
+--- scripts/zone/eastern_plaguelands/eastern_plaguelands.cpp	(Revision 913)
++++ scripts/zone/eastern_plaguelands/eastern_plaguelands.cpp	(Arbeitskopie)
+@@ -132,15 +132,15 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF+1:
+-            player->ADD_GOSSIP_ITEM( 0, "Thank you, Tirion.  What of your identity?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 2);
++            player->ADD_GOSSIP_ITEM( 0, "Danke, Tirion.  Was ist mit euer Pers�nlichkeit?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 2);
+             player->SEND_GOSSIP_MENU(4493, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+2:
+-            player->ADD_GOSSIP_ITEM( 0, "That is terrible.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 3);
++            player->ADD_GOSSIP_ITEM( 0, "Das ist grausam.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 3);
+             player->SEND_GOSSIP_MENU(4494, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+3:
+-            player->ADD_GOSSIP_ITEM( 0, "I will, Tirion.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 4);
++            player->ADD_GOSSIP_ITEM( 0, "Ich werde, Tirion.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 4);
+             player->SEND_GOSSIP_MENU(4495, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+4:
+Index: scripts/zone/hellfire_peninsula/hellfire_peninsula.cpp
+===================================================================
+--- scripts/zone/hellfire_peninsula/hellfire_peninsula.cpp	(Revision 913)
++++ scripts/zone/hellfire_peninsula/hellfire_peninsula.cpp	(Arbeitskopie)
+@@ -130,8 +130,8 @@
+ ## npc_wing_commander_dabiree
+ ######*/
+ 
+-#define GOSSIP_ITEM1_DAB "Fly me to Murketh and Shaadraz Gateways"
+-#define GOSSIP_ITEM2_DAB "Fly me to Shatter Point"
++#define GOSSIP_ITEM1_DAB "Fliege mich zu den Murketh und Shaadraz Toren"
++#define GOSSIP_ITEM2_DAB "Fliege mich zum Trümmerposten"
+ 
+ bool GossipHello_npc_wing_commander_dabiree(Player *player, Creature *_Creature)
+ {
+@@ -170,8 +170,8 @@
+ ## npc_gryphoneer_windbellow
+ ######*/
+ 
+-#define GOSSIP_ITEM1_WIN "Fly me to The Abyssal Shelf"
+-#define GOSSIP_ITEM2_WIN "Fly me to Honor Point"
++#define GOSSIP_ITEM1_WIN "Fliegt mich in die abyssische Untiefe"
++#define GOSSIP_ITEM2_WIN "Fliegt mich zum Ehrenposten"
+ 
+ bool GossipHello_npc_gryphoneer_windbellow(Player *player, Creature *_Creature)
+ {
+@@ -210,9 +210,9 @@
+ ## npc_wing_commander_brack
+ ######*/
+ 
+-#define GOSSIP_ITEM1_BRA "Fly me to Murketh and Shaadraz Gateways"
+-#define GOSSIP_ITEM2_BRA "Fly me to The Abyssal Shelf"
+-#define GOSSIP_ITEM3_BRA "Fly me to Spinebreaker Post"
++#define GOSSIP_ITEM1_BRA "Fliegt mich zum Murketh und dem Shaadraz Toren"
++#define GOSSIP_ITEM2_BRA "Fliegt mich in die abyssische Untiefe"
++#define GOSSIP_ITEM3_BRA "Fliegt mich zum Rückenbrecherposten"
+ 
+ bool GossipHello_npc_wing_commander_brack(Player *player, Creature *_Creature)
+ {
+Index: scripts/zone/ironforge/ironforge.cpp
+===================================================================
+--- scripts/zone/ironforge/ironforge.cpp	(Revision 913)
++++ scripts/zone/ironforge/ironforge.cpp	(Arbeitskopie)
+@@ -31,11 +31,11 @@
+ ## npc_royal_historian_archesonus
+ ######*/
+ 
+-#define GOSSIP_ITEM_ROYAL   "I am ready to listen"
+-#define GOSSIP_ITEM_ROYAL_1 "That is tragic. How did this happen?"
+-#define GOSSIP_ITEM_ROYAL_2 "Interesting, continue please."
+-#define GOSSIP_ITEM_ROYAL_3 "Unbelievable! How dare they??"
+-#define GOSSIP_ITEM_ROYAL_4 "Of course I will help!"
++#define GOSSIP_ITEM_ROYAL   "Ich bin bereit euch zuzuhören"
++#define GOSSIP_ITEM_ROYAL_1 "Das ist tragisch. Wie konnte dies passieren?"
++#define GOSSIP_ITEM_ROYAL_2 "Interessant, bitte fahrt fort."
++#define GOSSIP_ITEM_ROYAL_3 "Unglaublich! Was erlauben die sich??"
++#define GOSSIP_ITEM_ROYAL_4 "Natürlich werde ich helfen!"
+ 
+ bool GossipHello_npc_royal_historian_archesonus(Player *player, Creature *_Creature)
+ {
+Index: scripts/zone/loch_modan/loch_modan.cpp
+===================================================================
+--- scripts/zone/loch_modan/loch_modan.cpp	(Revision 913)
++++ scripts/zone/loch_modan/loch_modan.cpp	(Arbeitskopie)
+@@ -37,7 +37,7 @@
+         player->PrepareQuestMenu( _Creature->GetGUID() );
+ 
+     if (!player->GetQuestRewardStatus(3181) == 1)
+-        player->ADD_GOSSIP_ITEM( 0, "Open the gate please, i need to get to Searing Gorge", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
++        player->ADD_GOSSIP_ITEM( 0, "Öffne bitte das Tor. Ich muß in die Sengende Schlucht reisen", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+1);
+ 
+     player->SEND_GOSSIP_MENU(_Creature->GetNpcTextId(), _Creature->GetGUID());
+ 
+@@ -49,27 +49,27 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF+1:
+-            player->ADD_GOSSIP_ITEM( 0, "But i need to get there, now open the gate!", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 2);
++            player->ADD_GOSSIP_ITEM( 0, "Aber ich muss dort hin. Öffne jetzt das Tor!", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 2);
+             player->SEND_GOSSIP_MENU(1833, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+2:
+-            player->ADD_GOSSIP_ITEM( 0, "Ok, so what is this other way?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 3);
++            player->ADD_GOSSIP_ITEM( 0, "Ok, Wo ist dieser andere Weg?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 3);
+             player->SEND_GOSSIP_MENU(1834, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+3:
+-            player->ADD_GOSSIP_ITEM( 0, "Doesn't matter, i'm invulnerable.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 4);
++            player->ADD_GOSSIP_ITEM( 0, "Das macht nichts. Ich bin unverwundbar.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 4);
+             player->SEND_GOSSIP_MENU(1835, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+4:
+-            player->ADD_GOSSIP_ITEM( 0, "Yes...", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 5);
++            player->ADD_GOSSIP_ITEM( 0, "Ja...", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 5);
+             player->SEND_GOSSIP_MENU(1836, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+5:
+-            player->ADD_GOSSIP_ITEM( 0, "Ok, i'll try to remember that.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 6);
++            player->ADD_GOSSIP_ITEM( 0, "Ok, Ich werde daran denken.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 6);
+             player->SEND_GOSSIP_MENU(1837, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+6:
+-            player->ADD_GOSSIP_ITEM( 0, "A key? Ok!", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 7);
++            player->ADD_GOSSIP_ITEM( 0, "Ein Schlüssel? Ok!", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 7);
+             player->SEND_GOSSIP_MENU(1838, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+7:
+Index: scripts/zone/moonglade/moonglade.cpp
+===================================================================
+--- scripts/zone/moonglade/moonglade.cpp	(Revision 913)
++++ scripts/zone/moonglade/moonglade.cpp	(Arbeitskopie)
+@@ -88,10 +88,10 @@
+ ## npc_great_bear_spirit
+ ######*/
+ 
+-#define GOSSIP_BEAR1 "What do you represent, spirit?"
+-#define GOSSIP_BEAR2 "I seek to understand the importance of strength of the body."
+-#define GOSSIP_BEAR3 "I seek to understand the importance of strength of the heart."
+-#define GOSSIP_BEAR4 "I have heard your words, Great Bear Spirit, and I understand. I now seek your blessings to fully learn the way of the Claw."
++#define GOSSIP_BEAR1 "Was repräsentierst du, Geist?"
++#define GOSSIP_BEAR2 "Ich suche nach der Wichtigkeit der Stärke des Körpers."
++#define GOSSIP_BEAR3 "Ich suche nach der Wichtigkeit der Stärke des Herzes."
++#define GOSSIP_BEAR4 "Ich habe eure Worte gehört, großer Bärengeist und ich verstehe sie. Ich werde jetzt nach deiner Weisheit suchen, um die Weise des Greifers zu erlernen."
+ 
+ bool GossipHello_npc_great_bear_spirit(Player *player, Creature *_Creature)
+ {
+Index: scripts/zone/nagrand/nagrand.cpp
+===================================================================
+--- scripts/zone/nagrand/nagrand.cpp	(Revision 913)
++++ scripts/zone/nagrand/nagrand.cpp	(Arbeitskopie)
+@@ -182,7 +182,7 @@
+ bool GossipHello_mob_lump(Player *player, Creature *_Creature)
+ {
+     if (player->GetQuestStatus(9918) == QUEST_STATUS_INCOMPLETE)
+-        player->ADD_GOSSIP_ITEM( 0, "I need answers, ogre!", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF);
++        player->ADD_GOSSIP_ITEM( 0, "Ich benötige Antworten, Oger!", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF);
+ 
+     player->SEND_GOSSIP_MENU(9352, _Creature->GetGUID());
+ 
+@@ -194,15 +194,15 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF:
+-            player->ADD_GOSSIP_ITEM( 0, "Why are Boulderfist out this far? You know that this is Kurenai territory.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 1);
++            player->ADD_GOSSIP_ITEM( 0, "Warum haben die Felsfäuste das gaplant? Dies ist Gebiet der Kurenai.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 1);
+             player->SEND_GOSSIP_MENU(9353, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+1:
+-            player->ADD_GOSSIP_ITEM( 0, "And you think you can just eat anything you want? You're obviously trying to eat the Broken of Telaar.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 2);
++            player->ADD_GOSSIP_ITEM( 0, "Und Ihr denkt ihr könntet alles essen was ihr wollt? Ihr versucht offenbar die Zerbrochenen von Telaar zu essen.", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 2);
+             player->SEND_GOSSIP_MENU(9354, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+2:
+-            player->ADD_GOSSIP_ITEM( 0, "This means war, Lump! War I say!", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 3);
++            player->ADD_GOSSIP_ITEM( 0, "Das bedeutet Krieg, Brocken! Ich sage Krieg!", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 3);
+             player->SEND_GOSSIP_MENU(9355, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+3:
+@@ -258,7 +258,7 @@
+ 
+     //gossip when Survey the Land is incomplete (technically, after the flight)
+     if (player->GetQuestStatus(9991) == QUEST_STATUS_INCOMPLETE)
+-        player->ADD_GOSSIP_ITEM( 0, "Well...?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+20);
++        player->ADD_GOSSIP_ITEM( 0, "Nun...?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF+20);
+ 
+     //wowwiki.com/Varedis
+     if (player->GetQuestStatus(10646) == QUEST_STATUS_INCOMPLETE)
+@@ -278,15 +278,15 @@
+             player->SEND_GOSSIP_MENU(9420, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+11:
+-            player->ADD_GOSSIP_ITEM( 0, "And now?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 12);
++            player->ADD_GOSSIP_ITEM( 0, "Und nun?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 12);
+             player->SEND_GOSSIP_MENU(9421, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+12:
+-            player->ADD_GOSSIP_ITEM( 0, "How do you see them now?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 13);
++            player->ADD_GOSSIP_ITEM( 0, "Wie seht ihr sie nun?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 13);
+             player->SEND_GOSSIP_MENU(9422, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+13:
+-            player->ADD_GOSSIP_ITEM( 0, "Forge camps?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 14);
++            player->ADD_GOSSIP_ITEM( 0, "Ausbildungslager?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 14);
+             player->SEND_GOSSIP_MENU(9423, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+14:
+@@ -303,7 +303,7 @@
+             break;
+ 
+         case GOSSIP_ACTION_INFO_DEF+30:
+-            player->ADD_GOSSIP_ITEM( 0, "[PH] Story done", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 31);
++            player->ADD_GOSSIP_ITEM( 0, "[PH] Geschichte erzählt", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 31);
+             player->SEND_GOSSIP_MENU(384, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+31:
+Index: scripts/zone/searing_gorge/searing_gorge.cpp
+===================================================================
+--- scripts/zone/searing_gorge/searing_gorge.cpp	(Revision 913)
++++ scripts/zone/searing_gorge/searing_gorge.cpp	(Arbeitskopie)
+@@ -39,7 +39,7 @@
+         player->PrepareQuestMenu( _Creature->GetGUID() );
+ 
+     if (player->GetQuestStatus(3441) == QUEST_STATUS_INCOMPLETE)
+-        player->ADD_GOSSIP_ITEM( 0, "Tell me what drives this vengance?", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF);
++        player->ADD_GOSSIP_ITEM( 0, "Erzählt mir was diese Rachsucht auslöst", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF);
+ 
+     player->SEND_GOSSIP_MENU(_Creature->GetNpcTextId(), _Creature->GetGUID());
+ 
+@@ -51,7 +51,7 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF:
+-            player->ADD_GOSSIP_ITEM( 0, "Continue please", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 1);
++            player->ADD_GOSSIP_ITEM( 0, "Bitte fahrt fort", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 1);
+             player->SEND_GOSSIP_MENU(1954, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+1:
+@@ -76,7 +76,7 @@
+         player->PrepareQuestMenu( _Creature->GetGUID() );
+ 
+     if (player->GetQuestRewardStatus(7487) || player->GetQuestRewardStatus(7848))
+-        player->ADD_GOSSIP_ITEM(0, "Teleport me to the Molten Core", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 1);
++        player->ADD_GOSSIP_ITEM(0, "Teleportiert mich in den Geschmolzenen Kern", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 1);
+ 
+     player->SEND_GOSSIP_MENU(_Creature->GetNpcTextId(), _Creature->GetGUID());
+ 
+@@ -104,7 +104,7 @@
+         player->PrepareQuestMenu( _Creature->GetGUID() );
+ 
+     if (player->GetQuestStatus(3377) == QUEST_STATUS_INCOMPLETE)
+-        player->ADD_GOSSIP_ITEM( 0, "Tell me your story", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF);
++        player->ADD_GOSSIP_ITEM( 0, "Erzählt mir eure Geschichte", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF);
+ 
+     player->SEND_GOSSIP_MENU(1920, _Creature->GetGUID());
+ 
+@@ -116,11 +116,11 @@
+     switch (action)
+     {
+         case GOSSIP_ACTION_INFO_DEF:
+-            player->ADD_GOSSIP_ITEM( 0, "Please continue...", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 1);
++            player->ADD_GOSSIP_ITEM( 0, "Bitte fahrt fort...", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 1);
+             player->SEND_GOSSIP_MENU(1921, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+1:
+-            player->ADD_GOSSIP_ITEM( 0, "Goodbye", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 2);
++            player->ADD_GOSSIP_ITEM( 0, "Auf Wiedersehen", GOSSIP_SENDER_MAIN, GOSSIP_ACTION_INFO_DEF + 2);
+             player->SEND_GOSSIP_MENU(1922, _Creature->GetGUID());
+             break;
+         case GOSSIP_ACTION_INFO_DEF+2:
+Index: scripts/zone/silithus/silithus.cpp
+===================================================================
+--- scripts/zone/silithus/silithus.cpp	(Revision 913)
++++ scripts/zone/silithus/silithus.cpp	(Arbeitskopie)
+@@ -99,20 +99,20 @@
+ ###*/
+ 
+ //gossip item text best guess
+-#define GOSSIP_ITEM1 "I seek information about Natalia"
++#define GOSSIP_ITEM1 "Ich suche Informationen über Natalia"
+ 
+-#define GOSSIP_ITEM2 "That sounds dangerous!"
+-#define GOSSIP_ITEM3 "What did you do?"
+-#define GOSSIP_ITEM4 "Who?"
+-#define GOSSIP_ITEM5 "Women do that. What did she demand?"
+-#define GOSSIP_ITEM6 "What do you mean?"
+-#define GOSSIP_ITEM7 "What happened next?"
++#define GOSSIP_ITEM2 "Das hört sich gefährlich an!"
++#define GOSSIP_ITEM3 "Was habt ihr getan?"
++#define GOSSIP_ITEM4 "Wer?"
++#define GOSSIP_ITEM5 "Frauen tun das. Was hat sie verlangt?"
++#define GOSSIP_ITEM6 "Was meint ihr?"
++#define GOSSIP_ITEM7 "Was passierte dann?"
+ 
+-#define GOSSIP_ITEM11 "Yes, please continue"
+-#define GOSSIP_ITEM12 "What language?"
+-#define GOSSIP_ITEM13 "The Priestess attacked you?!"
+-#define GOSSIP_ITEM14 "I should ask the monkey about this"
+-#define GOSSIP_ITEM15 "Then what..."
++#define GOSSIP_ITEM11 "Ja, bitte fahrt fort"
++#define GOSSIP_ITEM12 "Welche Sprache?"
++#define GOSSIP_ITEM13 "Die Priesterinnen griffen euch an?!"
++#define GOSSIP_ITEM14 "Ich sollte den Affen darüber befragen"
++#define GOSSIP_ITEM15 "Als was..."
+ 
+ //trigger creatures to kill
+ #define TRIGGER_RUTGAR 15222
+Index: scripts/zone/stormwind/stormwind_city.cpp
+===================================================================
+--- scripts/zone/stormwind/stormwind_city.cpp	(Revision 913)
++++ scripts/zone/stormwind/stormwind_city.cpp	(Arbeitskopie)
+@@ -35,7 +35,7 @@
+ ## npc_archmage_malin
+ ######*/
+ 
+-#define GOSSIP_ITEM_MALIN "Can you send me to Theramore? I have an urgent message for Lady Jaina from Highlord Bolvar."
++#define GOSSIP_ITEM_MALIN "Könnt ihr mich nach Theramore teleportieren? Ich habe eine wichtige Botschaft Lady Jaina Prachtmeer von Hochlord Bolvar Fordragon."
+ 
+ bool GossipHello_npc_archmage_malin(Player *player, Creature *_Creature)
+ {
+Index: scripts/zone/tanaris/tanaris.cpp
+===================================================================
+--- scripts/zone/tanaris/tanaris.cpp	(Revision 913)
++++ scripts/zone/tanaris/tanaris.cpp	(Arbeitskopie)
+@@ -273,7 +273,7 @@
+ ## npc_steward_of_time
+ ######*/
+ 
+-#define GOSSIP_ITEM_FLIGHT  "Please take me to the master's lair."
++#define GOSSIP_ITEM_FLIGHT  "Bringt mich bitte zum Hort des Meisters."
+ 
+ bool GossipHello_npc_steward_of_time(Player *player, Creature *_Creature)
+ {

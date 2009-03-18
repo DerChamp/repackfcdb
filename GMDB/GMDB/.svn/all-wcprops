@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svnroot/gm-db/!svn/ver/952/trunk/GMDB
+END
+locales_gameobject.sql
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/gm-db/!svn/ver/944/trunk/GMDB/locales_gameobject.sql
+END
+locales_page_text.sql
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/gm-db/!svn/ver/952/trunk/GMDB/locales_page_text.sql
+END
+locales_quest.sql
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/gm-db/!svn/ver/905/trunk/GMDB/locales_quest.sql
+END
+locales_npc_text.sql
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/gm-db/!svn/ver/869/trunk/GMDB/locales_npc_text.sql
+END
+areatrigger_teleport.sql
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/gm-db/!svn/ver/876/trunk/GMDB/areatrigger_teleport.sql
+END
+locales_npc_option.sql
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/gm-db/!svn/ver/841/trunk/GMDB/locales_npc_option.sql
+END
+mangos_string.sql
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/gm-db/!svn/ver/946/trunk/GMDB/mangos_string.sql
+END
+areatrigger_tavern.sql
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/gm-db/!svn/ver/873/trunk/GMDB/areatrigger_tavern.sql
+END
+locales_creature.sql
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/gm-db/!svn/ver/932/trunk/GMDB/locales_creature.sql
+END
+command.sql
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svnroot/gm-db/!svn/ver/936/trunk/GMDB/command.sql
+END
+locales_achievement_reward.sql
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/gm-db/!svn/ver/856/trunk/GMDB/locales_achievement_reward.sql
+END
+db_script_string.sql
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/gm-db/!svn/ver/900/trunk/GMDB/db_script_string.sql
+END
+transports.sql
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/gm-db/!svn/ver/878/trunk/GMDB/transports.sql
+END
+locales_item.sql
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/gm-db/!svn/ver/937/trunk/GMDB/locales_item.sql
+END
